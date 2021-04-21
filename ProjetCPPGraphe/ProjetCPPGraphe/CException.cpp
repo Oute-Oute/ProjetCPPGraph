@@ -1,5 +1,5 @@
 ///
-/// @brief Voir CException.h pour les descriptions des methodes
+/// @brief Source de la classe CException
 /// @file CEsxeption.cpp
 /// @author NASSIRI Adam
 /// @coauthor BLUMSTEIN Thomas
@@ -11,17 +11,27 @@
 #include "CException.h"
 using namespace std;
 
+///@brief Constructeur de CException par defaut
+///@param RIEN
+///@return RIEN
 CException::CException() {
 	pEXCmessage = (char*) "Exception innatendue";
 	cEXCoperation = '0';
 }
 
+///@brief Constructeur de CException de confort avec indication de l'operation et du message
+///@param cEXCope : char Operateur 
+///@param pEXCmess : char* Message d'exception
+///@return RIEN
 CException::CException(char cEXCope, char * pEXCmess)
 {
 	pEXCmessage = pEXCmess;
 	cEXCoperation = cEXCope;
 }
 
+///@brief Destructeur de CException
+///@param RIEN
+///@return RIEN
 CException::~CException() {
 
 }
