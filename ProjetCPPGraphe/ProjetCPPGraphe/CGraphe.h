@@ -3,7 +3,6 @@
 #include <iostream>
 
 #include "CSommet.h"
-#include "const CGraphe.h"
 
 class CGraphe
 {
@@ -14,11 +13,11 @@ private:
 
 
 public:
-	CGraph();
+	CGraphe();
 
-	CGraph(CSommet** pSOMsommets, unsigned int uinbSommets);
+	CGraphe(CSommet** pSOMsommets, unsigned int uinbSommets);
 
-	CGraph(const CGraphe &GRAgraphe);
+	CGraphe(const CGraphe &GRAgraphe);
 
 	~CGraphe();
 

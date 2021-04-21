@@ -15,9 +15,9 @@ private:
 public:
 	CLecture();
 
-	void CLecture(char* pnF);
+	CLecture(char* pnF);
 
-	CLecture(CLecture LECLecture);
+	CLecture(const CLecture &LECLecture);
 
 	~CLecture();
 
@@ -25,9 +25,9 @@ public:
 
 	int LECGetNbArcs();
 
-	LECGetSommets();
+	CSommet* LECGetSommets();
 
-	LECGetArcs();
+	CArc* LECGetArcs();
 
 	void LECSetNbSommets();
 

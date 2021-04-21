@@ -2,8 +2,6 @@
 #include <string>
 #include <iostream>
 
-#include "const CArc.h"
-
 class CArc
 {
 private:

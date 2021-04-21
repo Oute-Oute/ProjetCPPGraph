@@ -3,7 +3,6 @@
 #include <iostream>
 
 #include "CArc.h"
-#include "const CSommet.h"
 
 class CSommet
 {

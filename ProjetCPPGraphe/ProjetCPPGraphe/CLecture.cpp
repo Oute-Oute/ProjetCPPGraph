@@ -8,11 +8,11 @@ CLecture::CLecture()
 {
 }
 
-void CLecture::CLecture(char* pnF)
+CLecture::CLecture(char* pnF)
 {
 }
 
-CLecture::CLecture(CLecture LECLecture)
+CLecture::CLecture(const CLecture &LECLecture)
 {
 }
 
@@ -30,12 +30,14 @@ int CLecture::LECGetNbArcs()
 	return 0;
 }
 
-CLecture::LECGetSommets()
+CSommet* CLecture::LECGetSommets()
 {
+	return nullptr;
 }
 
-CLecture::LECGetArcs()
+CArc* CLecture::LECGetArcs()
 {
+	return nullptr;
 }
 
 void CLecture::LECSetNbSommets()

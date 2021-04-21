@@ -4,15 +4,15 @@
 #include "CGraphe.h"
 
 
-CGraphe::CGraph()
+CGraphe::CGraphe()
 {
 }
 
-CGraphe::CGraph(CSommet** pSOMsommets, unsigned int uinbSommets)
+CGraphe::CGraphe(CSommet** pSOMsommets, unsigned int uinbSommets)
 {
 }
 
-CGraphe::CGraph(const CGraphe &GRAgraphe)
+CGraphe::CGraphe(const CGraphe &GRAgraphe)
 {
 }
 
