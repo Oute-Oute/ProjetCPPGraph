@@ -5,6 +5,14 @@
 
 CSommet::CSommet()
 {
+	uiSOMnbSommets++;
+
+	pARCarrivants = nullptr;
+	pARCpartants = nullptr;
+
+	uiSOMindice = uiSOMnbSommets;
+	uiSOMnbArrivees = 0;
+	uiSOMnbDeparts = 0;
 }
 
 CSommet::CSommet(unsigned int uiindice)

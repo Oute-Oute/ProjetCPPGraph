@@ -7,6 +7,8 @@
 class CSommet
 {
 private:
+	static unsigned int uiSOMnbSommets;
+
 	unsigned int uiSOMindice;
 
 	CArc** pARCarrivants;

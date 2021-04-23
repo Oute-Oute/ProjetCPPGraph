@@ -2,6 +2,11 @@
 //
 
 #include <iostream>
+#include"CSommet.h"
+
+//INITIALISATION NOMBRE DE SOMMETS
+unsigned int CSommet::uiSOMnbSommets = 0;
+
 
 int main()
 {
