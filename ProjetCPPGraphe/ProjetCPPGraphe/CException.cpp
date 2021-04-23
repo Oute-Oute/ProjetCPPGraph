@@ -6,8 +6,6 @@
 /// @date 2021-04/21
 ///
 
-#include <fstream>
-#include <iostream>
 #include "CException.h"
 using namespace std;
 

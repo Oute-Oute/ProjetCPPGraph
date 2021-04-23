@@ -6,10 +6,7 @@
 /// @date 2021-04/21
 ///
 
-#include <string>
-#include <iostream>
 #include "CArc.h"
-
 
 ///@brief Constructeur de Carc par defaut
 ///@param RIEN

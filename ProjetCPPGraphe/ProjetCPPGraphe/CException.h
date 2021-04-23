@@ -6,17 +6,16 @@
 /// @date 2021-04/21
 ///
 
-
 #include <string>
 #include <iostream>
 
+///@brief On throw des objets de type CException pour gerer les exceptions pendant l'execution du code
 class CException
 {
 private:
 	char cEXCoperation;
 
 	char* pEXCmessage;
-
 
 public:
 

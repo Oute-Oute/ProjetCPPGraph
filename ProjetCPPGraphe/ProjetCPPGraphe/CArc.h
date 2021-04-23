@@ -9,6 +9,8 @@
 #include <string>
 #include <iostream>
 
+///@brief un objet CArc represente une arrete orientee sur le graph
+///@details un CArc contient l'attribut uiARCdestination, int representant l'indice du noeud de destination
 class CArc
 {
 private:

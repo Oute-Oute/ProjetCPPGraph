@@ -1,6 +1,5 @@
 #include <string>
 #include <iostream>
-
 #include "CSommet.h"
 
 
