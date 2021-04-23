@@ -19,7 +19,6 @@ private:
 
 	unsigned int uiSOMnbArrivees;
 
-
 public:
 	CSommet();
 
@@ -49,13 +48,13 @@ public:
 
 	void SOMSetTNbArrivees(unsigned int uinb);
 
-	void SOMAddArcArrivant(CArc* pARCarc);
+	void SOMAddArcArrivant(CSommet SOMdepart);
 
-	void SOMAddArcPartant(CArc* pARCarc);
+	void SOMAddArcPartant(CSommet SOMarrive);
 
-	void SOMModArcArrivant(unsigned int uidest, unsigned int uinouvelleDest);
+	void SOMModArcArrivant(CSommet SOMdest, CSommet SOMnouvelleDest);
 
-	void SOMModArcPartant(unsigned int uidest, unsigned int uinouvelleDest);
+	void SOMModArcPartant(CSommet SOMdest, CSommet SOMnouvelleDest);
 
 	void SOMDelArcArrivant(unsigned int uidest);
 

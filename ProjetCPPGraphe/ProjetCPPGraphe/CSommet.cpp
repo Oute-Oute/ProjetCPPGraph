@@ -17,6 +17,14 @@ CSommet::CSommet()
 
 CSommet::CSommet(unsigned int uiindice)
 {
+	uiSOMnbSommets++;
+
+	pARCarrivants = nullptr;
+	pARCpartants = nullptr;
+
+	uiSOMindice = uiindice;
+	uiSOMnbArrivees = 0;
+	uiSOMnbDeparts = 0;
 }
 
 CSommet::~CSommet()
@@ -25,81 +33,126 @@ CSommet::~CSommet()
 
 CSommet::CSommet(const CSommet &SOMsommet)
 {
+	uiSOMnbSommets++;
+
+	pARCarrivants = SOMsommet.pARCarrivants;
+	pARCpartants = SOMsommet.pARCpartants;
+
+	uiSOMindice = SOMsommet.uiSOMindice;
+	uiSOMnbArrivees = SOMsommet.uiSOMnbArrivees;
+	uiSOMnbDeparts = SOMsommet.uiSOMnbDeparts;
 }
 
 unsigned int CSommet::SOMGetIndice()
 {
-	return 0;
+	return uiSOMindice;
 }
 
 CArc** CSommet::SOMGetTabArrivants()
 {
-	return 0;
+	return pARCarrivants;
 }
 
 CArc** CSommet::SOMGetTabPartants()
 {
-	return 0;
+	return pARCpartants;
 }
 
 unsigned int CSommet::SOMGetTabNbDeparts()
 {
-	return 0;
+	return uiSOMnbDeparts;
 }
 
 unsigned int CSommet::SOMGetTNbArrivees()
 {
-	return 0;
+	return uiSOMnbArrivees;
 }
 
 void CSommet::SOMSetIndice(unsigned int uiindice)
 {
+	uiSOMindice = uiindice;
 }
 
 void CSommet::SOMSetTabArrivants(CArc** pARCtab)
 {
+	pARCarrivants = pARCtab;
 }
 
 void CSommet::SOMSetTabPartants(CArc** pARCtab)
 {
+	pARCpartants = pARCtab;
 }
 
 void CSommet::SOMSetTabNbDeparts(unsigned int uinb)
 {
+	uiSOMnbDeparts = uinb;
 }
 
 void CSommet::SOMSetTNbArrivees(unsigned int uinb)
 {
+	uiSOMnbArrivees = uinb;
 }
 
-void CSommet::SOMAddArcArrivant(CArc* pARCarc)
+void CSommet::SOMAddArcArrivant(CSommet SOMdepart)
 {
+	CArc* pARCarc = new CArc(SOMdepart.uiSOMindice);
+
+	uiSOMnbArrivees++;
+
+	pARCarrivants[uiSOMnbArrivees] = pARCarc;
+
+	SOMdepart.SOMAddArcPartant(*this);
 }
 
-void CSommet::SOMAddArcPartant(CArc* pARCarc)
+void CSommet::SOMAddArcPartant(CSommet SOMarrive)
 {
+	CArc* pARCarc = new CArc(SOMarrive.uiSOMindice);
+
+	uiSOMnbDeparts++;
+
+	pARCpartants[uiSOMnbDeparts] = pARCarc;
 }
 
-void CSommet::SOMModArcArrivant(unsigned int uidest, unsigned int uinouvelleDest)
+void CSommet::SOMModArcArrivant(CSommet SOMdest, CSommet SOMnouvelleDest)
 {
+	unsigned int uicompteArc;
+	for (uicompteArc = 0; uicompteArc<uiSOMnbArrivees ;uicompteArc++) {
+		if (pARCarrivants[uicompteArc]->ARCGetDestination() == SOMdest.uiSOMindice) {
+			pARCarrivants[uicompteArc]->ARCSetDestination(SOMnouvelleDest.uiSOMindice);
+		}
+
+	}
+
 }
 
-void CSommet::SOMModArcPartant(unsigned int uidest, unsigned int uinouvelleDest)
+void CSommet::SOMModArcPartant(CSommet SOMdest, CSommet SOMnouvelleDest)
 {
+	unsigned int uicompteArc;
+	for (uicompteArc = 0; uicompteArc < uiSOMnbDeparts; uicompteArc++) {
+		if (pARCpartants[uicompteArc]->ARCGetDestination() == SOMdest.uiSOMindice) {
+			pARCpartants[uicompteArc]->ARCSetDestination(SOMnouvelleDest.uiSOMindice);
+		}
+
+	}
+
 }
 
 void CSommet::SOMDelArcArrivant(unsigned int uidest)
 {
+
 }
 
 void CSommet::SOMDelArcPartant(unsigned int uidest)
 {
+
 }
 
 void CSommet::SOMRechercherArcArrivant(unsigned int uidest)
 {
+
 }
 
 void CSommet::SOMRechercherArcPartant(unsigned int uidest)
 {
+
 }
