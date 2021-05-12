@@ -6,7 +6,7 @@
 class CGraphe
 {
 private:
-	CSommet** pSOMsommets;
+	CSommet** pSOMtabSommets;
 
 	unsigned int uinbSommets;
 

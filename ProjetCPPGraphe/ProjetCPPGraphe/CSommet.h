@@ -145,4 +145,9 @@ public:
 	///@return
 	void SOMRechercherArcPartant(unsigned int uidest);
 
+	///
+	///
+	///
+	void SOMInverseTableaux();
+
 };
