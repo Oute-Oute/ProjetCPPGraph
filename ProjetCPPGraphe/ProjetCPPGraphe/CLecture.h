@@ -51,24 +51,54 @@ public:
 	///@return RIEN
 	~CLecture();
 
-	int LECGetNbSommets();
+	///@brief Getter du nombre de sommets
+	///@param Rien
+	///@return uinbSommets
+	unsigned int LECGetNbSommets();
 
-	int LECGetNbArcs();
+	///@brief Getter du nombre d'arcs
+	///@param Rien
+	///@return uinbArcs
+	unsigned int LECGetNbArcs();
 
+	///@brief Getter du tableau de sommets
+	///@param Rien
+	///@return *itabSommets
 	int *LECGetSommets();
 
+	///@brief Getter du tableau des Arcs Partants
+	///@param Rien
+	///@return *itabArcsDepart
 	int *LECGetArcsDepart();
 	
+	///@brief Getter du tableau des Arcs d'Arrivée
+	///@param Rien
+	///@return*itabArcsArrivee
 	int *LECGetArcsArrivee();
 
+	///@brief Setter du nombre de sommets depuis un fichier
+	///@param Rien
+	///@return Rien 
 	void LECSetNbSommets();
 
+	///@brief Setter du nombre d'arc depuis un fichier
+	///@param Rien
+	///@return Rien
 	void LECSetNbArcs();
 
+	///@brief Setter du tableau de sommets depuis un fichier
+	///@param Rien
+	///@return Rien
 	void LECSetSommets();
 
+	///@brief Setter des tableaux d'arcs arrivants et partants
+	///@param Rien
+	///@return Rien
 	void LECSetArcs();
 
+	///@brief Fonction de lecture du fichier 
+	///@param Rien
+	///@return Rien
 	void LECLireFichier();
 
 };
