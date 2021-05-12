@@ -3,7 +3,7 @@
 /// @file CArc.h
 /// @author NASSIRI Adam
 /// @coauthor BLUMSTEIN Thomas
-/// @date 2021-04/21
+/// @date 2021-05-12
 ///
 
 #include <string>
@@ -15,7 +15,6 @@ class CArc
 {
 private:
 	unsigned int uiARCdestination;
-
 
 public:
 	///@brief Constructeur de Carc par defaut

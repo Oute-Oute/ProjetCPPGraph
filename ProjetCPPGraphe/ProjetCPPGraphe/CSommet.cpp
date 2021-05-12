@@ -98,17 +98,20 @@ void CSommet::SOMAddArcArrivant(CSommet SOMdepart)
 	CArc* pARCarc = new CArc(SOMdepart.uiSOMindice);
 
 	uiSOMnbArrivees++;
+	realloc(pARCpartants, uiSOMnbDeparts);
 
 	pARCarrivants[uiSOMnbArrivees] = pARCarc;
 
-	SOMdepart.SOMAddArcPartant(*this);
+	//ajouter un arc partant dans l'autre sommet
+	//SOMdepart.SOMAddArcPartant(*this);
 }
 
 void CSommet::SOMAddArcPartant(CSommet SOMarrive)
 {
 	CArc* pARCarc = new CArc(SOMarrive.uiSOMindice);
 
-	uiSOMnbDeparts++;
+	uiSOMnbDeparts ++;
+	realloc(pARCpartants, uiSOMnbDeparts);
 
 	pARCpartants[uiSOMnbDeparts] = pARCarc;
 }
@@ -139,11 +142,37 @@ void CSommet::SOMModArcPartant(CSommet SOMdest, CSommet SOMnouvelleDest)
 
 void CSommet::SOMDelArcArrivant(unsigned int uidest)
 {
+	for (unsigned int uicompteArc = 0; uicompteArc < uiSOMnbArrivees ; uicompteArc++) {
+		if (pARCarrivants[uicompteArc]->ARCGetDestination() == uidest) {
+			//suppression de l'element du tableau des arrivees
+			for (unsigned int uicompteSuppr = uicompteArc ; uicompteSuppr < uiSOMnbArrivees; uicompteSuppr++) {
+				pARCarrivants[uicompteSuppr] = pARCarrivants[uicompteSuppr+1];
+			}
+
+			uiSOMnbArrivees --;
+			realloc(pARCarrivants, uiSOMnbArrivees);
+
+		}
+
+	}
 
 }
 
 void CSommet::SOMDelArcPartant(unsigned int uidest)
 {
+	for (unsigned int uicompteArc = 0; uicompteArc < uiSOMnbDeparts; uicompteArc++) {
+		if (pARCpartants[uicompteArc]->ARCGetDestination() == uidest) {
+			//suppression de l'element du tableau des arrivees
+			for (unsigned int uicompteSuppr = uicompteArc; uicompteSuppr < uiSOMnbDeparts; uicompteSuppr++) {
+				pARCpartants[uicompteSuppr] = pARCpartants[uicompteSuppr + 1];
+			}
+
+			uiSOMnbDeparts --;
+			realloc(pARCpartants, uiSOMnbDeparts);
+
+		}
+
+	}
 
 }
 
