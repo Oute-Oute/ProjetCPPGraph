@@ -60,7 +60,6 @@ void CGraphe::GRAModSommet(unsigned int uisomm)
 
 void CGraphe::GRADelSommet(unsigned int uisomm)
 {
-
 	for (unsigned int uicompteSommets = 0 ; uicompteSommets < uinbSommets ; uicompteSommets++) {
 		if (pSOMtabSommets[uicompteSommets]->SOMGetIndice() == uisomm) {
 			//suppression du sommet
@@ -76,10 +75,36 @@ void CGraphe::GRADelSommet(unsigned int uisomm)
 		}
 
 	}
-	
 
 }
 
 void CGraphe::GRAAfficherGraphe()
 {
+	std::cout << "Ce graphique contient " << uinbSommets << " sommets d'indices:" << std::endl;
+
+	unsigned int uicompteSommets;
+	unsigned int uicompteArcs;
+	for (uicompteSommets = 0 ; uicompteSommets < uinbSommets; uicompteSommets++) {
+		std::cout << pSOMtabSommets[uicompteSommets]->SOMGetIndice();
+		
+		if (uicompteSommets < uinbSommets-1) {
+			std::cout<< " ; ";
+		}
+
+	}
+
+	std::cout << "\n\n";
+	std::cout << "Liste des sommets et les destinations de leurs arcs partants:" << std::endl;
+
+	for (uicompteSommets = 0; uicompteSommets < uinbSommets; uicompteSommets++) {
+		std::cout << "Sommet " << pSOMtabSommets[uicompteSommets]->SOMGetIndice() << " : ";
+		CArc ** partants = pSOMtabSommets[uicompteSommets]->SOMGetTabPartants();
+		for (uicompteArcs = 0 ; uicompteArcs < pSOMtabSommets[uicompteSommets]->SOMGetTabNbDeparts(); uicompteArcs++) {
+			std::cout << pSOMtabSommets[uicompteSommets]->SOMGetIndice() << "->" << partants[uicompteArcs]->ARCGetDestination() << " ; ";
+		}
+
+		std::cout << std::endl;
+
+	}
+
 }

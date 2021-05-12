@@ -93,9 +93,9 @@ void CSommet::SOMAddArcArrivant(CSommet SOMdepart)
 	CArc* pARCarc = new CArc(SOMdepart.uiSOMindice);
 
 	uiSOMnbArrivees++;
-	realloc(pARCpartants, uiSOMnbDeparts * sizeof(CArc*));
+	pARCarrivants = (CArc**)realloc(pARCpartants, uiSOMnbDeparts * sizeof(CArc*));
 
-	pARCarrivants[uiSOMnbArrivees] = pARCarc;
+	pARCarrivants[uiSOMnbArrivees-1] = pARCarc;
 
 	//ajouter un arc partant dans l'autre sommet
 	//SOMdepart.SOMAddArcPartant(*this);
@@ -106,9 +106,10 @@ void CSommet::SOMAddArcPartant(CSommet SOMarrive)
 	CArc* pARCarc = new CArc(SOMarrive.uiSOMindice);
 
 	uiSOMnbDeparts ++;
-	realloc(pARCpartants, uiSOMnbDeparts * sizeof(CArc*));
 
-	pARCpartants[uiSOMnbDeparts] = pARCarc;
+	pARCpartants = (CArc**)realloc(pARCpartants, uiSOMnbDeparts * sizeof(CArc*));
+
+	pARCpartants[uiSOMnbDeparts-1] = pARCarc;
 }
 
 void CSommet::SOMModArcArrivant(CSommet SOMdest, CSommet SOMnouvelleDest)
@@ -147,7 +148,7 @@ void CSommet::SOMDelArcArrivant(unsigned int uidest)
 			}
 
 			uiSOMnbArrivees --;
-			realloc(pARCarrivants, uiSOMnbArrivees * sizeof(CArc*));
+			pARCarrivants = (CArc**)realloc(pARCarrivants, uiSOMnbArrivees * sizeof(CArc*));
 
 		}
 
@@ -167,7 +168,7 @@ void CSommet::SOMDelArcPartant(unsigned int uidest)
 			}
 
 			uiSOMnbDeparts --;
-			realloc(pARCpartants, uiSOMnbDeparts * sizeof(CArc*));
+			pARCpartants = (CArc**)realloc(pARCpartants, uiSOMnbDeparts * sizeof(CArc*));
 
 		}
 

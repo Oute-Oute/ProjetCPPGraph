@@ -2,20 +2,43 @@
 //
 
 #include <iostream>
-#include"CSommet.h"
 #include "CLecture.h"
+#include "CGraphe.h"
 using namespace std;
 
 
 int main()
 {
+	/*
     cout << "Hello World!\n";
 
 	char* nf = (char*)"test.txt";
 	CLecture Test(nf);
 	Test.LECLireFichier();
+	*/
+	cout << "tests sommets\n";
+	CSommet *sommet1 = new CSommet(1);
+	CSommet *sommet2 = new CSommet(2);
+	CSommet *sommet3 = new CSommet(3);
 
+	cout << "initialisation faite\n";
 
+	sommet1->SOMAddArcPartant(*sommet2);
+	sommet1->SOMAddArcArrivant(*sommet3);
+	cout << "sommet 1 complet\n";
+
+	sommet2->SOMAddArcPartant(*sommet3);
+	sommet2->SOMAddArcArrivant(*sommet1);
+	cout << "sommet 2 complet\n";
+
+	sommet3->SOMAddArcPartant(*sommet1);
+	sommet3->SOMAddArcArrivant(*sommet2);
+	cout << "sommet 3 complet\n";
+
+	CSommet* sommets[3] = { sommet1, sommet2, sommet3 };
+
+	CGraphe graphe = CGraphe(sommets, 3);
+	graphe.GRAAfficherGraphe();
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage

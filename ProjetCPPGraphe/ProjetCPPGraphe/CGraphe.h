@@ -14,16 +14,17 @@ private:
 public:
 
 	///@brief Constructeur de CGraph par defaut
-	///
-	///
+	///@param RIEN
+	///@return RIEN
 	CGraphe();
 
-	///
-	///
-	///
+	///@brief constructeur de CGraphe de comfort
+	///@param pSOMsommets : CSommet** tableau de pointeurs vers les sommets du CGraph
+	///@param uinbSommets : unsigned int correspondant au nombre de sommets du CGraph
+	///@return RIEN
 	CGraphe(CSommet** pSOMsommets, unsigned int uinbSommets);
 
-	///
+	///@brief
 	///
 	///
 	CGraphe(const CGraphe &GRAgraphe);

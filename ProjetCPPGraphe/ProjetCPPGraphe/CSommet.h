@@ -15,9 +15,6 @@
 class CSommet
 {
 private:
-	//nombre de sommets existants
-	unsigned int uiSOMnbSommets;
-
 	//indice du sommet actuel
 	unsigned int uiSOMindice;
 
