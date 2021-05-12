@@ -16,7 +16,6 @@ class CArc
 private:
 	unsigned int uiARCdestination;
 
-
 public:
 	///@brief Constructeur de Carc par defaut
 	///@param RIEN
