@@ -5,7 +5,6 @@
 
 CSommet::CSommet()
 {
-
 	pARCarrivants = nullptr;
 	pARCpartants = nullptr;
 
@@ -16,7 +15,6 @@ CSommet::CSommet()
 
 CSommet::CSommet(unsigned int uiindice)
 {
-
 	pARCarrivants = nullptr;
 	pARCpartants = nullptr;
 
@@ -95,7 +93,7 @@ void CSommet::SOMAddArcArrivant(CSommet SOMdepart)
 	CArc* pARCarc = new CArc(SOMdepart.uiSOMindice);
 
 	uiSOMnbArrivees++;
-	realloc(pARCpartants, uiSOMnbDeparts);
+	realloc(pARCpartants, uiSOMnbDeparts * sizeof(CArc*));
 
 	pARCarrivants[uiSOMnbArrivees] = pARCarc;
 
@@ -108,7 +106,7 @@ void CSommet::SOMAddArcPartant(CSommet SOMarrive)
 	CArc* pARCarc = new CArc(SOMarrive.uiSOMindice);
 
 	uiSOMnbDeparts ++;
-	realloc(pARCpartants, uiSOMnbDeparts);
+	realloc(pARCpartants, uiSOMnbDeparts * sizeof(CArc*));
 
 	pARCpartants[uiSOMnbDeparts] = pARCarc;
 }
@@ -142,14 +140,14 @@ void CSommet::SOMDelArcArrivant(unsigned int uidest)
 	for (unsigned int uicompteArc = 0; uicompteArc < uiSOMnbArrivees ; uicompteArc++) {
 		if (pARCarrivants[uicompteArc]->ARCGetDestination() == uidest) {
 			//suppression de l'arc
-			delete &pARCpartants[uicompteArc];
+			delete pARCpartants[uicompteArc];
 			//suppression de l'element du tableau des arrivees
 			for (unsigned int uicompteSuppr = uicompteArc ; uicompteSuppr < uiSOMnbArrivees; uicompteSuppr++) {
 				pARCarrivants[uicompteSuppr] = pARCarrivants[uicompteSuppr+1];
 			}
 
 			uiSOMnbArrivees --;
-			realloc(pARCarrivants, uiSOMnbArrivees);
+			realloc(pARCarrivants, uiSOMnbArrivees * sizeof(CArc*));
 
 		}
 
@@ -162,14 +160,14 @@ void CSommet::SOMDelArcPartant(unsigned int uidest)
 	for (unsigned int uicompteArc = 0; uicompteArc < uiSOMnbDeparts; uicompteArc++) {
 		if (pARCpartants[uicompteArc]->ARCGetDestination() == uidest) {
 			//suppression de l'arc
-			delete &pARCpartants[uicompteArc];
+			delete pARCpartants[uicompteArc];
 			//suppression de l'element du tableau des arrivees
 			for (unsigned int uicompteSuppr = uicompteArc; uicompteSuppr < uiSOMnbDeparts; uicompteSuppr++) {
 				pARCpartants[uicompteSuppr] = pARCpartants[uicompteSuppr + 1];
 			}
 
 			uiSOMnbDeparts --;
-			realloc(pARCpartants, uiSOMnbDeparts);
+			realloc(pARCpartants, uiSOMnbDeparts * sizeof(CArc*));
 
 		}
 
@@ -185,4 +183,11 @@ void CSommet::SOMRechercherArcArrivant(unsigned int uidest)
 void CSommet::SOMRechercherArcPartant(unsigned int uidest)
 {
 
+}
+
+void CSommet::SOMInverseTableaux() {
+	CArc** pARCTemp = pARCarrivants;
+
+	pARCarrivants = pARCpartants;
+	pARCpartants = pARCTemp;
 }
