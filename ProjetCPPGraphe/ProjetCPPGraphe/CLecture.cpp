@@ -2,7 +2,9 @@
 #include "CException.h"
 using namespace std;
 
-
+///@brief Constructeur de CLecture par defaut
+///@param RIEN
+///@return RIEN
 CLecture::CLecture()
 {
 	pLECnomFichier = nullptr;
@@ -13,11 +15,17 @@ CLecture::CLecture()
 	itabSommets = nullptr;
 }
 
+///@brief Constructeur de CLecture en spécifiant un nom de fichier
+///@param char* cnF : char* nom du fichier à lire 
+///@return RIEN
 CLecture::CLecture(char* cnF)
 {
 	pLECnomFichier = cnF;
 }
 
+///@brief Constructuer de CLecture de recopie
+///@param LECLecture : CLecture a copier
+///@return RIEN
 CLecture::CLecture(const CLecture &LECLecture)
 {
 	pLECnomFichier = LECLecture.pLECnomFichier;
@@ -28,35 +36,56 @@ CLecture::CLecture(const CLecture &LECLecture)
 	itabSommets = LECLecture.itabSommets;
 }
 
+///@brief Destructeur de CLecture
+///@param RIEN
+///@return RIEN
 CLecture::~CLecture()
 {
 }
 
-int CLecture::LECGetNbSommets()
+///@brief Getter du nombre de sommets
+///@param Rien
+///@return uinbSommets
+unsigned int CLecture::LECGetNbSommets()
 {
 	return uinbSommets;
 }
 
-int CLecture::LECGetNbArcs()
+///@brief Getter du nombre d'arcs
+///@param Rien
+///@return uinbArcs
+unsigned int CLecture::LECGetNbArcs()
 {
 	return uinbArcs;
 }
 
+///@brief Getter du tableau de sommets
+///@param Rien
+///@return *itabSommets
 int * CLecture::LECGetSommets()
 {
 	return itabSommets;
 }
 
+///@brief Getter du tableau des Arcs Partants
+///@param Rien
+///@return *itabArcsDepart
 int * CLecture::LECGetArcsDepart()
 {
 	return itabArcsDepart;
 }
 
+///@brief Getter du tableau des Arcs d'Arrivée
+///@param Rien
+///@return*itabArcsArrivee
 int * CLecture::LECGetArcsArrivee()
 {
 	return itabArcsArrivee;
 }
 
+///@brief Setter du nombre de sommets depuis un fichier
+///@param Rien
+///@return Rien 
 void CLecture::LECSetNbSommets()
 {
 	char cLigne[50];
@@ -69,6 +98,9 @@ void CLecture::LECSetNbSommets()
 	
 }
 
+///@brief Setter du nombre d'arc depuis un fichier
+///@param Rien
+///@return Rien
 void CLecture::LECSetNbArcs()
 {
 	char cLigne[50];
@@ -80,6 +112,9 @@ void CLecture::LECSetNbArcs()
 	uinbArcs=(atoi(cParse));
 }
 
+///@brief Setter du tableau de sommets depuis un fichier
+///@param Rien
+///@return Rien
 void CLecture::LECSetSommets()
 {
 	char cLigne[50];
@@ -101,6 +136,9 @@ void CLecture::LECSetSommets()
 	}
 }
 
+///@brief Setter des tableaux d'arcs arrivants et partants
+///@param Rien
+///@return Rien
 void CLecture::LECSetArcs()
 {
 	char cLigne[50];
@@ -124,6 +162,9 @@ void CLecture::LECSetArcs()
 	}
 }
 
+///@brief Fonction de lecture du fichier 
+///@param Rien
+///@return Rien
 void CLecture::LECLireFichier()
 {
 	CException *EXCExceptionLecture = new CException();
