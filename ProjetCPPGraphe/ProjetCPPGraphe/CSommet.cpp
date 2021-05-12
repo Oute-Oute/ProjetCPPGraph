@@ -143,8 +143,11 @@ void CSommet::SOMDelArcArrivant(unsigned int uidest)
 		if (pARCarrivants[uicompteArc]->ARCGetDestination == uidest) {
 			//suppression de l'element du tableau des arrivees
 			for (unsigned int uicompteSuppr = uicompteArc ; uicompteSuppr < uiSOMnbArrivees; uicompteSuppr++) {
-				pARCarrivants[uicompteSuppr] = pARCarrivants[uicompteSuppr];
+				pARCarrivants[uicompteSuppr] = pARCarrivants[uicompteSuppr+1];
 			}
+
+			uiSOMnbArrivees -= 1;
+			realloc(pARCarrivants, uiSOMnbArrivees);
 
 		}
 
@@ -154,6 +157,20 @@ void CSommet::SOMDelArcArrivant(unsigned int uidest)
 
 void CSommet::SOMDelArcPartant(unsigned int uidest)
 {
+	for (unsigned int uicompteArc = 0; uicompteArc < uiSOMnbDeparts; uicompteArc++) {
+		if (pARCpartants[uicompteArc]->ARCGetDestination == uidest) {
+			//suppression de l'element du tableau des arrivees
+			for (unsigned int uicompteSuppr = uicompteArc; uicompteSuppr < uiSOMnbDeparts; uicompteSuppr++) {
+				pARCpartants[uicompteSuppr] = pARCpartants[uicompteSuppr + 1];
+			}
+
+			uiSOMnbDeparts -= 1;
+			realloc(pARCpartants, uiSOMnbDeparts);
+
+		}
+
+	}
+
 
 }
 
