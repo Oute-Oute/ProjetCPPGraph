@@ -5,19 +5,17 @@
 
 CSommet::CSommet()
 {
-	uiSOMnbSommets++;
 
 	pARCarrivants = nullptr;
 	pARCpartants = nullptr;
 
-	uiSOMindice = uiSOMnbSommets;
+	uiSOMindice = 0;
 	uiSOMnbArrivees = 0;
 	uiSOMnbDeparts = 0;
 }
 
 CSommet::CSommet(unsigned int uiindice)
 {
-	uiSOMnbSommets++;
 
 	pARCarrivants = nullptr;
 	pARCpartants = nullptr;
@@ -33,7 +31,6 @@ CSommet::~CSommet()
 
 CSommet::CSommet(const CSommet &SOMsommet)
 {
-	uiSOMnbSommets++;
 
 	pARCarrivants = SOMsommet.pARCarrivants;
 	pARCpartants = SOMsommet.pARCpartants;

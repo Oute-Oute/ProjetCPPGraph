@@ -2,7 +2,6 @@
 #include <string>
 #include <iostream>
 #include <fstream>
-#include "CGraphe.h"
 using namespace std;
 
 class CLecture
