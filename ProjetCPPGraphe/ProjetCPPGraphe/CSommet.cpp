@@ -5,19 +5,17 @@
 
 CSommet::CSommet()
 {
-	uiSOMnbSommets++;
 
 	pARCarrivants = nullptr;
 	pARCpartants = nullptr;
 
-	uiSOMindice = uiSOMnbSommets;
+	uiSOMindice = 0;
 	uiSOMnbArrivees = 0;
 	uiSOMnbDeparts = 0;
 }
 
 CSommet::CSommet(unsigned int uiindice)
 {
-	uiSOMnbSommets++;
 
 	pARCarrivants = nullptr;
 	pARCpartants = nullptr;
@@ -33,7 +31,6 @@ CSommet::~CSommet()
 
 CSommet::CSommet(const CSommet &SOMsommet)
 {
-	uiSOMnbSommets++;
 
 	pARCarrivants = SOMsommet.pARCarrivants;
 	pARCpartants = SOMsommet.pARCpartants;
@@ -144,6 +141,8 @@ void CSommet::SOMDelArcArrivant(unsigned int uidest)
 {
 	for (unsigned int uicompteArc = 0; uicompteArc < uiSOMnbArrivees ; uicompteArc++) {
 		if (pARCarrivants[uicompteArc]->ARCGetDestination() == uidest) {
+			//suppression de l'arc
+			delete &pARCpartants[uicompteArc];
 			//suppression de l'element du tableau des arrivees
 			for (unsigned int uicompteSuppr = uicompteArc ; uicompteSuppr < uiSOMnbArrivees; uicompteSuppr++) {
 				pARCarrivants[uicompteSuppr] = pARCarrivants[uicompteSuppr+1];
@@ -162,6 +161,8 @@ void CSommet::SOMDelArcPartant(unsigned int uidest)
 {
 	for (unsigned int uicompteArc = 0; uicompteArc < uiSOMnbDeparts; uicompteArc++) {
 		if (pARCpartants[uicompteArc]->ARCGetDestination() == uidest) {
+			//suppression de l'arc
+			delete &pARCpartants[uicompteArc];
 			//suppression de l'element du tableau des arrivees
 			for (unsigned int uicompteSuppr = uicompteArc; uicompteSuppr < uiSOMnbDeparts; uicompteSuppr++) {
 				pARCpartants[uicompteSuppr] = pARCpartants[uicompteSuppr + 1];

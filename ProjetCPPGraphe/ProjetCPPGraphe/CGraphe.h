@@ -13,7 +13,7 @@ private:
 
 public:
 
-	///
+	///@brief Constructeur de CGraph par defaut
 	///
 	///
 	CGraphe();
