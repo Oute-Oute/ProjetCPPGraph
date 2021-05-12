@@ -1,10 +1,3 @@
-<<<<<<< Updated upstream
-=======
-#include <string>
-#include <iostream>
-#include <fstream>
-
->>>>>>> Stashed changes
 #include "CLecture.h"
 #include "CException.h"
 using namespace std;
@@ -12,22 +5,61 @@ using namespace std;
 
 CLecture::CLecture()
 {
+	pLECnomFichier = nullptr;
+	uinbArcs = 0;
+	uinbSommets = 0;
+	itabArcsArrivee = nullptr;
+	itabArcsDepart = nullptr;
+	itabSommets = nullptr;
 }
 
-CLecture::CLecture(char* pnF)
+CLecture::CLecture(char* cnF)
 {
+	pLECnomFichier = cnF;
+	uinbArcs = 0;
+	uinbSommets = 0;
+	itabArcsArrivee = nullptr;
+	itabArcsDepart = nullptr;
+	itabSommets = nullptr;
 }
 
 CLecture::CLecture(const CLecture &LECLecture)
 {
-}
-
-CLecture::CLecture(CGraphe* GRAgraphe, char* cnF)
-{
+	pLECnomFichier = LECLecture.pLECnomFichier;
+	uinbArcs = LECLecture.uinbArcs;
+	uinbSommets = LECLecture.uinbSommets;
+	itabArcsArrivee = LECLecture.itabArcsArrivee;
+	itabArcsDepart = LECLecture.itabArcsDepart;
+	itabSommets = LECLecture.itabSommets;
 }
 
 CLecture::~CLecture()
 {
+}
+
+int CLecture::LECGetNbSommets()
+{
+	return uinbSommets;
+}
+
+int CLecture::LECGetNbArcs()
+{
+	return uinbArcs;
+}
+
+int * CLecture::LECGetSommets()
+{
+	return itabSommets;
+}
+
+int * CLecture::LECGetArcsDepart()
+{
+	return itabArcsDepart;
+}
+
+int * CLecture::LECGetArcsArrivee()
+{
+	return itabArcsArrivee;
 }
 
 void CLecture::LECSetNbSommets()
@@ -38,7 +70,7 @@ void CLecture::LECSetNbSommets()
 	fmyFile.getline(cLigne, 50);
 	cParse = strtok_s(cLigne, "=", &context);
 	cParse = strtok_s(NULL, "=", &context);
-	pGRAgraphe->GRASetnbSommets(atoi(cParse));
+	uinbSommets=(atoi(cParse));
 	
 }
 
@@ -58,30 +90,39 @@ void CLecture::LECSetSommets()
 	char cLigne[50];
 	char* cParse = new char[50];
 	char* context = NULL;
-	unsigned int uiBoucleLignes;
-	unsigned int uiBoucleColonnes;
-	unsigned int uiboucleTab;
-	int itabSommets[pGRAgraphe->GRAGetnbSommets()];
-	for (uiboucleTab = 0; uiboucleTab < uiLECnbLignes; uiboucleTab++) {
-		pLECtabValeurs[uiboucleTab] = new double[uiLECnbColonnes];
-	}
-
+	unsigned int uiBoucle;
+	itabSommets = new int[uinbSommets];
 	fmyFile.getline(cLigne, 50);
 	fmyFile.getline(cLigne, 50);
-	for (uiBoucleLignes = 0; uiBoucleLignes < uiLECnbLignes; uiBoucleLignes++) {
-		cParse = strtok_s(cLigne, "\t", &context);
+	for (uiBoucle = 0; uiBoucle < uinbSommets; uiBoucle++) {
+		//cParse = strtok_s(cLigne, "\t", &context);
 		cParse = strtok_s(cParse, " ", &context);
-		for (uiBoucleColonnes = 0; uiBoucleColonnes < uiLECnbColonnes; uiBoucleColonnes++) {
-
-			pLECtabValeurs[uiBoucleLignes][uiBoucleColonnes] = atof(cParse);
-			cParse = strtok_s(NULL, " ", &context);
-		}
+		itabSommets[uiBoucle] = atoi(cParse);
+		cParse = strtok_s(NULL, " ", &context);
+		
 		fmyFile.getline(cLigne, 50);
 	}
 }
 
 void CLecture::LECSetArcs()
 {
+	char cLigne[50];
+	char* cParse = new char[50];
+	char* context = NULL;
+	unsigned int uiBoucle;
+	itabArcsDepart = new int[uinbArcs];
+	itabArcsArrivee = new int[uinbArcs];
+	fmyFile.getline(cLigne, 50);
+	fmyFile.getline(cLigne, 50);
+	for (uiBoucle = 0; uiBoucle < uinbSommets; uiBoucle++) {
+		//cParse = strtok_s(cLigne, "\t", &context);
+		cParse = strtok_s(cParse, " ", &context);
+		itabArcsDepart[uiBoucle] = atoi(cParse);
+		cParse = strtok_s(cParse, " ", &context);
+		itabArcsDepart[uiBoucle] = atoi(cParse);
+
+		fmyFile.getline(cLigne, 50);
+	}
 }
 
 void CLecture::LECLireFichier()
