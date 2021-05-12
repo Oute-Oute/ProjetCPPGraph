@@ -16,11 +16,6 @@ CLecture::CLecture()
 CLecture::CLecture(char* cnF)
 {
 	pLECnomFichier = cnF;
-	uinbArcs = 0;
-	uinbSommets = 0;
-	itabArcsArrivee = nullptr;
-	itabArcsDepart = nullptr;
-	itabSommets = nullptr;
 }
 
 CLecture::CLecture(const CLecture &LECLecture)
@@ -96,9 +91,11 @@ void CLecture::LECSetSommets()
 	fmyFile.getline(cLigne, 50);
 	for (uiBoucle = 0; uiBoucle < uinbSommets; uiBoucle++) {
 		//cParse = strtok_s(cLigne, "\t", &context);
-		cParse = strtok_s(cParse, " ", &context);
-		itabSommets[uiBoucle] = atoi(cParse);
+		cParse = strtok_s(cLigne, "=", &context);
 		cParse = strtok_s(NULL, " ", &context);
+		itabSommets[uiBoucle] = atoi(cParse);
+		
+
 		
 		fmyFile.getline(cLigne, 50);
 	}
@@ -116,10 +113,12 @@ void CLecture::LECSetArcs()
 	fmyFile.getline(cLigne, 50);
 	for (uiBoucle = 0; uiBoucle < uinbSommets; uiBoucle++) {
 		//cParse = strtok_s(cLigne, "\t", &context);
-		cParse = strtok_s(cParse, " ", &context);
+		cParse = strtok_s(cLigne, "=", &context);
+		cParse = strtok_s(NULL, ",", &context);
 		itabArcsDepart[uiBoucle] = atoi(cParse);
-		cParse = strtok_s(cParse, " ", &context);
-		itabArcsDepart[uiBoucle] = atoi(cParse);
+		cParse = strtok_s(NULL, "=", &context);
+		cParse = strtok_s(NULL, ",", &context);
+		itabArcsArrivee[uiBoucle] = atoi(cParse);
 
 		fmyFile.getline(cLigne, 50);
 	}

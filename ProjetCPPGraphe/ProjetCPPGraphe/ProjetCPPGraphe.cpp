@@ -13,6 +13,7 @@ int main()
 
 	char* nf = (char*)"test.txt";
 	CLecture Test(nf);
+	Test.LECLireFichier();
 
 
 }
