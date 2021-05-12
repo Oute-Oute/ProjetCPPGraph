@@ -11,6 +11,8 @@ private:
 
 	CGraphe* pGRAgraphe;
 
+	ifstream fmyFile;
+	unsigned int uinbArcs;
 
 public:
 	CLecture();
@@ -19,15 +21,9 @@ public:
 
 	CLecture(const CLecture &LECLecture);
 
+	CLecture(CGraphe* GRAgraphe, char* cnF);
+
 	~CLecture();
-
-	int LECGetNbSommets();
-
-	int LECGetNbArcs();
-
-	CSommet* LECGetSommets();
-
-	CArc* LECGetArcs();
 
 	void LECSetNbSommets();
 
@@ -38,7 +34,5 @@ public:
 	void LECSetArcs();
 
 	void LECLireFichier();
-
-	CLecture(CGraphe* GRAgraphe, char* cnF);
 
 };
