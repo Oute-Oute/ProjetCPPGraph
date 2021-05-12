@@ -1,29 +1,46 @@
 
 #include <string>
 #include <iostream>
-
+#include <fstream>
 #include "CGraphe.h"
+using namespace std;
 
 class CLecture
 {
 private:
 	char* pLECnomFichier;
 
-	CGraphe* pGRAgraphe;
-
 	ifstream fmyFile;
+
 	unsigned int uinbArcs;
+	
+	unsigned int uinbSommets;
+
+	int *itabSommets;
+
+	int *itabArcsDepart;
+
+	int *itabArcsArrivee;
+
 
 public:
 	CLecture();
 
-	CLecture(char* pnF);
+	CLecture(char* cnF);
 
 	CLecture(const CLecture &LECLecture);
 
-	CLecture(CGraphe* GRAgraphe, char* cnF);
-
 	~CLecture();
+
+	int LECGetNbSommets();
+
+	int LECGetNbArcs();
+
+	int *LECGetSommets();
+
+	int *LECGetArcsDepart();
+	
+	int *LECGetArcsArrivee();
 
 	void LECSetNbSommets();
 

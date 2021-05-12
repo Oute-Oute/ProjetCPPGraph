@@ -3,14 +3,18 @@
 
 #include <iostream>
 #include"CSommet.h"
-
-//INITIALISATION NOMBRE DE SOMMETS
-unsigned int CSommet::uiSOMnbSommets = 0;
+#include "CLecture.h"
+using namespace std;
 
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    cout << "Hello World!\n";
+
+	char* nf = (char*)"test.txt";
+	CLecture Test(nf);
+
+
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage
