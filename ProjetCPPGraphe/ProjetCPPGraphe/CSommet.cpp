@@ -29,13 +29,18 @@ CSommet::~CSommet()
 
 CSommet::CSommet(const CSommet &SOMsommet)
 {
-
-	pARCarrivants = SOMsommet.pARCarrivants;
-	pARCpartants = SOMsommet.pARCpartants;
-
 	uiSOMindice = SOMsommet.uiSOMindice;
 	uiSOMnbArrivees = SOMsommet.uiSOMnbArrivees;
 	uiSOMnbDeparts = SOMsommet.uiSOMnbDeparts;
+
+	for (unsigned int uiCompteArc = 0; uiCompteArc < uiSOMnbArrivees; uiCompteArc ++) {
+		pARCarrivants[uiCompteArc] = SOMsommet.pARCarrivants[uiCompteArc];
+	}
+
+	for (unsigned int uiCompteArc = 0; uiCompteArc < uiSOMnbDeparts; uiCompteArc++) {
+		pARCpartants[uiCompteArc] = SOMsommet.pARCpartants[uiCompteArc];
+	}
+
 }
 
 unsigned int CSommet::SOMGetIndice()
@@ -88,9 +93,9 @@ void CSommet::SOMSetTNbArrivees(unsigned int uinb)
 	uiSOMnbArrivees = uinb;
 }
 
-void CSommet::SOMAddArcArrivant(CSommet SOMdepart)
+void CSommet::SOMAddArcArrivant(unsigned int uiIndice)
 {
-	CArc* pARCarc = new CArc(SOMdepart.uiSOMindice);
+	CArc* pARCarc = new CArc(uiIndice);
 
 	uiSOMnbArrivees++;
 	pARCarrivants = (CArc**)realloc(pARCpartants, uiSOMnbDeparts * sizeof(CArc*));
@@ -101,9 +106,9 @@ void CSommet::SOMAddArcArrivant(CSommet SOMdepart)
 	//SOMdepart.SOMAddArcPartant(*this);
 }
 
-void CSommet::SOMAddArcPartant(CSommet SOMarrive)
+void CSommet::SOMAddArcPartant(unsigned int uiIndice)
 {
-	CArc* pARCarc = new CArc(SOMarrive.uiSOMindice);
+	CArc* pARCarc = new CArc(uiIndice);
 
 	uiSOMnbDeparts ++;
 
@@ -112,24 +117,24 @@ void CSommet::SOMAddArcPartant(CSommet SOMarrive)
 	pARCpartants[uiSOMnbDeparts-1] = pARCarc;
 }
 
-void CSommet::SOMModArcArrivant(CSommet SOMdest, CSommet SOMnouvelleDest)
+void CSommet::SOMModArcArrivant(unsigned int uiIndice, unsigned int uiNouvelIndice)
 {
 	unsigned int uicompteArc;
 	for (uicompteArc = 0; uicompteArc<uiSOMnbArrivees ;uicompteArc++) {
-		if (pARCarrivants[uicompteArc]->ARCGetDestination() == SOMdest.uiSOMindice) {
-			pARCarrivants[uicompteArc]->ARCSetDestination(SOMnouvelleDest.uiSOMindice);
+		if (pARCarrivants[uicompteArc]->ARCGetDestination() == uiIndice) {
+			pARCarrivants[uicompteArc]->ARCSetDestination(uiNouvelIndice);
 		}
 
 	}
 
 }
 
-void CSommet::SOMModArcPartant(CSommet SOMdest, CSommet SOMnouvelleDest)
+void CSommet::SOMModArcPartant(unsigned int uiIndice, unsigned int uiNouvelIndice)
 {
 	unsigned int uicompteArc;
 	for (uicompteArc = 0; uicompteArc < uiSOMnbDeparts; uicompteArc++) {
-		if (pARCpartants[uicompteArc]->ARCGetDestination() == SOMdest.uiSOMindice) {
-			pARCpartants[uicompteArc]->ARCSetDestination(SOMnouvelleDest.uiSOMindice);
+		if (pARCpartants[uicompteArc]->ARCGetDestination() == uiIndice) {
+			pARCpartants[uicompteArc]->ARCSetDestination(uiNouvelIndice);
 		}
 
 	}
