@@ -17,8 +17,8 @@ int main()
 	Test.LECLireFichier();
 	*/
 	cout << "tests sommets\n";
-	CSommet *sommet1 = new CSommet(15);
-	CSommet *sommet2 = new CSommet(22);
+	CSommet *sommet1 = new CSommet(1);
+	CSommet *sommet2 = new CSommet(2);
 	CSommet *sommet3 = new CSommet(3);
 
 	cout << "initialisation faite\n";
