@@ -95,12 +95,13 @@ void CSommet::SOMSetTNbArrivees(unsigned int uinb)
 
 void CSommet::SOMAddArcArrivant(unsigned int uiIndice)
 {
-	CArc* pARCarc = new CArc(uiIndice);
+	CArc* pARCarcArrivee = new CArc(uiIndice);
 
 	uiSOMnbArrivees++;
-	pARCarrivants = (CArc**)realloc(pARCpartants, uiSOMnbDeparts * sizeof(CArc*));
+	pARCarrivants = (CArc**)realloc(pARCarrivants, uiSOMnbArrivees * sizeof(CArc*));
 
-	pARCarrivants[uiSOMnbArrivees-1] = pARCarc;
+	pARCarrivants[uiSOMnbArrivees-1] = pARCarcArrivee;
+
 
 	//ajouter un arc partant dans l'autre sommet
 	//SOMdepart.SOMAddArcPartant(*this);
