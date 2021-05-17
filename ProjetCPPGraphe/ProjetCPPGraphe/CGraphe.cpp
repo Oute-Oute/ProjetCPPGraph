@@ -80,10 +80,12 @@ void CGraphe::GRADelSommet(unsigned int uisomm)
 
 void CGraphe::GRAAfficherGraphe()
 {
+	
 	std::cout << "Ce graphique contient " << uinbSommets << " sommets d'indices:" << std::endl;
 
 	unsigned int uicompteSommets;
 	unsigned int uicompteArcs;
+	
 	for (uicompteSommets = 0 ; uicompteSommets < uinbSommets; uicompteSommets++) {
 		std::cout << pSOMtabSommets[uicompteSommets]->SOMGetIndice();
 		

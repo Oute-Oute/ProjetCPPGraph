@@ -23,22 +23,39 @@ int main()
 
 	cout << "initialisation faite\n";
 
-	sommet1->SOMAddArcPartant(*sommet2);
-	sommet1->SOMAddArcArrivant(*sommet3);
+	sommet1->SOMAddArcPartant(2);
+	sommet1->SOMAddArcArrivant(3);
 	cout << "sommet 1 complet\n";
 
-	sommet2->SOMAddArcPartant(*sommet3);
-	sommet2->SOMAddArcArrivant(*sommet1);
+	sommet2->SOMAddArcPartant(3);
+	sommet2->SOMAddArcArrivant(1);
 	cout << "sommet 2 complet\n";
 
-	sommet3->SOMAddArcPartant(*sommet1);
-	sommet3->SOMAddArcArrivant(*sommet2);
+	sommet3->SOMAddArcPartant(1);
+	sommet3->SOMAddArcArrivant(2);
 	cout << "sommet 3 complet\n";
 
 	CSommet* sommets[3] = { sommet1, sommet2, sommet3 };
 
-	CGraphe graphe = CGraphe(sommets, 3);
-	graphe.GRAAfficherGraphe();
+	CGraphe graphe (sommets, 3);
+
+	///////////////////////////////////////
+	unsigned int uicompteSommets;
+	unsigned int uicompteArcs;
+	unsigned int uinbSommets = 3;
+
+	for (uicompteSommets = 0; uicompteSommets < uinbSommets; uicompteSommets++) {
+		std::cout << "Sommet " << sommets[uicompteSommets]->SOMGetIndice() << " : ";
+		CArc ** partants = sommets[uicompteSommets]->SOMGetTabPartants();
+		for (uicompteArcs = 0; uicompteArcs < sommets[uicompteSommets]->SOMGetTabNbDeparts(); uicompteArcs++) {
+			std::cout << sommets[uicompteSommets]->SOMGetIndice() << "->" << partants[uicompteArcs]->ARCGetDestination() << " ; ";
+		}
+
+		std::cout << std::endl;
+
+	}
+
+	//graphe.GRAAfficherGraphe();
 }
 
 // Exécuter le programme : Ctrl+F5 ou menu Déboguer > Exécuter sans débogage

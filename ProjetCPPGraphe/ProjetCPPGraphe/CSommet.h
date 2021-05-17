@@ -105,22 +105,22 @@ public:
 	///@brief
 	///@param
 	///@return
-	void SOMAddArcArrivant(CSommet SOMdepart);
+	void SOMAddArcArrivant(unsigned int uiIndice);
 
 	///@brief
 	///@param
 	///@return
-	void SOMAddArcPartant(CSommet SOMarrive);
+	void SOMAddArcPartant(unsigned int uiIndice);
 
 	///@brief
 	///@param
 	///@return
-	void SOMModArcArrivant(CSommet SOMdest, CSommet SOMnouvelleDest);
+	void SOMModArcArrivant(unsigned int uiIndice, unsigned int uiNouvelIndice);
 
 	///@brief
 	///@param
 	///@return
-	void SOMModArcPartant(CSommet SOMdest, CSommet SOMnouvelleDest);
+	void SOMModArcPartant(unsigned int uiIndice, unsigned int uiNouvelIndice);
 
 	///@brief
 	///@param
