@@ -102,8 +102,6 @@ void CSommet::SOMAddArcArrivant(unsigned int uiIndice)
 	pARCarrivants = (CArc**)realloc(pARCarrivants, uiSOMnbArrivees * sizeof(CArc*));
 
 	pARCarrivants[uiSOMnbArrivees-1] = pARCarc;
-
-	delete pARCarc;
 }
 
 void CSommet::SOMAddArcPartant(unsigned int uiIndice)
@@ -115,8 +113,6 @@ void CSommet::SOMAddArcPartant(unsigned int uiIndice)
 	pARCpartants = (CArc**)realloc(pARCpartants, uiSOMnbDeparts * sizeof(CArc*));
 
 	pARCpartants[uiSOMnbDeparts-1] = pARCarc;
-
-	delete pARCarc;
 }
 
 void CSommet::SOMModArcArrivant(unsigned int uiIndice, unsigned int uiNouvelIndice)

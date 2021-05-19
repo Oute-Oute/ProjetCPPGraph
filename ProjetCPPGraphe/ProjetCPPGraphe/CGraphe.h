@@ -73,4 +73,8 @@ public:
 	///
 	void GRAAfficherGraphe();
 
+	///
+	///
+	///
+	void GRAInverserGraphe();
 };

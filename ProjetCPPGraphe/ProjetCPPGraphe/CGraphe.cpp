@@ -108,5 +108,12 @@ void CGraphe::GRAAfficherGraphe()
 		std::cout << std::endl;
 
 	}
+	std::cout << std::endl;
+}
+
+void CGraphe::GRAInverserGraphe() {
+	for (unsigned int uiCompteSommets = 0 ; uiCompteSommets < GRAGetnbSommets() ; uiCompteSommets++) {
+		pSOMtabSommets[uiCompteSommets]->SOMInverseTableaux();
+	}
 
 }
