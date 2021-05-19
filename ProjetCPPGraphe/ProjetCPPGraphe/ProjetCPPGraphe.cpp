@@ -9,33 +9,26 @@ using namespace std;
 
 int main()
 {
-	/*
+	
     cout << "Hello World!\n";
 
 	char* nf = (char*)"test.txt";
 	CLecture Test(nf);
 	Test.LECLireFichier();
-	*/
+	
 	cout << "tests sommets\n";
-	CSommet *sommet1 = new CSommet(1);
-	CSommet *sommet2 = new CSommet(2);
-	CSommet *sommet3 = new CSommet(3);
+	CSommet** sommets =new CSommet*[Test.LECGetNbSommets()];
+	for (int i = 0; i < Test.LECGetNbSommets(); i++) {
+		sommets[i] = new CSommet(Test.LECGetSommets()[i]);
+	}
+	for (int i = 0; i < Test.LECGetNbArcs(); i++) {
+		sommets[Test.LECGetArcsDepart()[i]-1]->SOMAddArcPartant(Test.LECGetArcsArrivee()[i]);
+		sommets[Test.LECGetArcsArrivee()[i]-1]->SOMAddArcArrivant(Test.LECGetArcsDepart()[i]);
+	}
+
 
 	cout << "initialisation faite\n";
 
-	sommet1->SOMAddArcPartant(2);
-	sommet1->SOMAddArcArrivant(3);
-	cout << "sommet 1 complet\n";
-
-	sommet2->SOMAddArcPartant(3);
-	sommet2->SOMAddArcArrivant(1);
-	cout << "sommet 2 complet\n";
-
-	sommet3->SOMAddArcPartant(1);
-	sommet3->SOMAddArcArrivant(2);
-	cout << "sommet 3 complet\n";
-
-	CSommet* sommets[3] = { sommet1, sommet2, sommet3 };
 
 	CGraphe graphe (sommets, 3);
 
