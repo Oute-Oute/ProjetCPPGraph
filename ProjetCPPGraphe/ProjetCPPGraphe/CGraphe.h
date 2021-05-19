@@ -1,6 +1,6 @@
-
 #include <string>
 #include <iostream>
+
 #include "CSommet.h"
 
 class CGraphe
@@ -9,7 +9,6 @@ private:
 	CSommet** pSOMtabSommets;
 
 	unsigned int uinbSommets;
-
 
 public:
 
@@ -74,4 +73,8 @@ public:
 	///
 	void GRAAfficherGraphe();
 
+	///
+	///
+	///
+	void GRAInverserGraphe();
 };
