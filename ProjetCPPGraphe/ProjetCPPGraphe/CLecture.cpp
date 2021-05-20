@@ -168,7 +168,7 @@ void CLecture::LECSetArcs()
 void CLecture::LECLireFichier()
 {
 	CException *EXCExceptionLecture = new CException();
-	EXCExceptionLecture->EXCSetOperation('L');
+	EXCExceptionLecture->EXCSetOperation((char*)"Lecture de fichier");
 
 	
 	try {

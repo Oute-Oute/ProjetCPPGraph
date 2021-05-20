@@ -34,4 +34,21 @@ int main()
 
 	graphe.GRAAfficherGraphe();
 
+	graphe.GRAInverserGraphe();
+
+	std::cout << "ajout manuel d'un sommet dans le graphe\n" << std::endl;
+	CSommet *sommet4 = new CSommet(3);
+
+	sommet4->SOMAddArcPartant(1);
+	sommet4->SOMAddArcArrivant(2);
+	try {
+		graphe.GRAAddSommet(sommet4);
+	}
+
+	catch (CException *EXCException){
+		EXCException->EXCAfficherException();
+	}
+
+	graphe.GRAAfficherGraphe();
+
 }

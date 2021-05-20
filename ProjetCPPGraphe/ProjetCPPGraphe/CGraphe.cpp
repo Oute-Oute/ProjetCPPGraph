@@ -1,6 +1,3 @@
-#include <string>
-#include <iostream>
-
 #include "CGraphe.h"
 
 
@@ -48,6 +45,17 @@ void CGraphe::GRASetnbSommets(unsigned int uinbSommets)
 
 void CGraphe::GRAAddSommet(CSommet* pSOMsommet)
 {
+	CException *EXCException = new CException();
+	EXCException->EXCSetOperation((char*)"ajout d'un sommet dans un graphe");
+
+	for (unsigned int uicompteSommets = 0; uicompteSommets < uinbSommets; uicompteSommets++) {
+		if (pSOMtabSommets[uicompteSommets]->SOMGetIndice() == pSOMsommet->SOMGetIndice()) {
+			EXCException->EXCSetMessage((char*)"l'indice de ce somment existe deja dans ce graphe");
+			throw EXCException;
+		}
+
+	}
+
 	uinbSommets++;
 	realloc(pSOMtabSommets, uinbSommets * sizeof(CSommet*));
 

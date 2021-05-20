@@ -13,7 +13,7 @@
 class CException
 {
 private:
-	char cEXCoperation;
+	char* pEXCoperation;
 
 	char* pEXCmessage;
 
@@ -28,7 +28,7 @@ public:
 	///@param cEXCope : char Operateur 
 	///@param pEXCmess : char* Message d'exception
 	///@return RIEN
-	CException(char cEXCope, char* pEXCmess);
+	CException(char* pEXCope, char* pEXCmess);
 
 	///@brief Destructeur de CException
 	///@param RIEN
@@ -48,12 +48,12 @@ public:
 	/// @brief retourne l operation concernee par la CException
 	/// @param RIEN
 	/// @return cEXCOperation l operateur sous forme de char
-	char EXCGetOperation();
+	void EXCGetOperation(char* pEXCope);
 
 	/// @brief definit l operation concernee par la CException
 	/// @param cOperation l operateur sous forme de char
 	/// @return RIEN
-	void EXCSetOperation(char cEXCope);
+	void EXCSetOperation(char* cEXCope);
 
 	/// @brief affiche le message d'exception de la CException courante
 	/// @param RIEN

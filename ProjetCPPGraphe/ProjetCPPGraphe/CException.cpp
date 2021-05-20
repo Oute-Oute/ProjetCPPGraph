@@ -14,17 +14,17 @@ using namespace std;
 ///@return RIEN
 CException::CException() {
 	pEXCmessage = (char*) "Exception innatendue";
-	cEXCoperation = '0';
+	pEXCoperation = (char*)"inconnue";
 }
 
 ///@brief Constructeur de CException de confort avec indication de l'operation et du message
 ///@param cEXCope : char Operateur 
 ///@param pEXCmess : char* Message d'exception
 ///@return RIEN
-CException::CException(char cEXCope, char * pEXCmess)
+CException::CException(char* pEXCope, char * pEXCmess)
 {
 	pEXCmessage = pEXCmess;
-	cEXCoperation = cEXCope;
+	pEXCoperation = pEXCope;
 }
 
 ///@brief Destructeur de CException
@@ -51,22 +51,22 @@ void CException::EXCSetMessage(char* pEXCmess) {
 /// @brief retourne l operation concernee par la CException
 /// @param RIEN
 /// @return cEXCOperation l operateur sous forme de char
-char CException::EXCGetOperation() {
-	return cEXCoperation;
+void CException::EXCGetOperation(char* pEXCope) {
+	strcpy_s(pEXCope, sizeof pEXCope, pEXCoperation);
 }
 
 /// @brief definit l operation concernee par la CException
 /// @param cOperation l operateur sous forme de char
 /// @return RIEN
-void CException::EXCSetOperation(char cEXCope) {
-	cEXCoperation = cEXCope;
+void CException::EXCSetOperation(char* pEXCope) {
+	pEXCoperation = pEXCope;
 }
 
 /// @brief affiche le message d'exception de la CException courante
 /// @param RIEN
 /// @return RIEN
 void CException::EXCAfficherException() {
-	cout << "Operation " << cEXCoperation << ", exception: " << pEXCmessage << endl;
+	cout << "Operation " << pEXCoperation << ", exception: " << pEXCmessage << endl;
 }
 
 
