@@ -1,6 +1,5 @@
 #include "CGraphe.h"
 
-
 CGraphe::CGraphe()
 {
 	pSOMtabSommets = nullptr;
@@ -9,6 +8,20 @@ CGraphe::CGraphe()
 
 CGraphe::CGraphe(CSommet** pSOMsommets, unsigned int uinbSommets)
 {
+	CException *EXCException = new CException();
+	EXCException->EXCSetOperation((char*)"creation d'un graphe");
+
+	for (unsigned int uicompteSommets = 0; uicompteSommets < uinbSommets-1; uicompteSommets++) {
+		for (unsigned int uicompareSommets = uicompteSommets+1; uicompareSommets < uinbSommets; uicompareSommets++) {
+			if (pSOMsommets[uicompteSommets]->SOMGetIndice() == pSOMsommets[uicompareSommets]->SOMGetIndice()) {
+				EXCException->EXCSetMessage((char*)"un indice apparait 2 fois dans le graphe");
+				throw EXCException;
+			}
+
+		}
+
+	}
+
 	pSOMtabSommets = pSOMsommets;
 	this->uinbSommets = uinbSommets;
 }
