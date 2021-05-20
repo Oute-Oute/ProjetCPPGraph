@@ -188,8 +188,25 @@ void CSommet::SOMRechercherArcPartant(unsigned int uidest)
 }
 
 void CSommet::SOMInverseTableaux() {
-	CArc** pARCTemp = pARCarrivants;
+	
+	CArc** pARCTemp = nullptr;
+	
+	pARCTemp = (CArc**)realloc(pARCarrivants, uiSOMnbArrivees * sizeof(CArc*));
+	for (unsigned int uicompteArc = 0; uicompteArc < uiSOMnbArrivees; uicompteArc++) {
+		pARCTemp[uicompteArc] = pARCarrivants[uicompteArc];
+	}
+	unsigned int uiLenARCTemp = uiSOMnbArrivees;
 
-	pARCarrivants = pARCpartants;
-	pARCpartants = pARCTemp;
+	pARCarrivants = (CArc**)realloc(pARCpartants, uiSOMnbDeparts * sizeof(CArc*));
+	for (unsigned int uicompteArc = 0; uicompteArc < uiSOMnbDeparts; uicompteArc++) {
+		pARCarrivants[uicompteArc] = pARCpartants[uicompteArc];
+	}
+	uiSOMnbArrivees = uiSOMnbDeparts;
+
+	pARCpartants = (CArc**)realloc(pARCTemp, uiLenARCTemp * sizeof(CArc*));
+	for (unsigned int uicompteArc = 0; uicompteArc < uiLenARCTemp; uicompteArc++) {
+		pARCpartants[uicompteArc] = pARCTemp[uicompteArc];
+	}
+	uiSOMnbDeparts = uiLenARCTemp;
+
 }

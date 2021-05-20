@@ -11,6 +11,7 @@ int main()
 {
     cout << "Hello World!\n";
 	try {
+		
 		char* nf = (char*)"test.txt";
 		CLecture Test(nf);
 		Test.LECLireFichier();
@@ -26,7 +27,7 @@ int main()
 		}
 
 
-		CGraphe graphe(sommets, 3);
+		CGraphe graphe(sommets, Test.LECGetNbSommets());
 
 		graphe.GRAAfficherGraphe();
 
@@ -35,8 +36,7 @@ int main()
 
 		graphe.GRAAfficherGraphe();
 	}
-
-
+		
 	catch (CException *EXCException) {
 		EXCException->EXCAfficherException();
 	}

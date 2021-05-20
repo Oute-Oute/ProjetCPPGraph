@@ -149,7 +149,7 @@ void CLecture::LECSetArcs()
 	itabArcsArrivee = new int[uinbArcs];
 	fmyFile.getline(cLigne, 50);
 	fmyFile.getline(cLigne, 50);
-	for (uiBoucle = 0; uiBoucle < uinbSommets; uiBoucle++) {
+	for (uiBoucle = 0; uiBoucle < uinbArcs; uiBoucle++) {
 		//cParse = strtok_s(cLigne, "\t", &context);
 		cParse = strtok_s(cLigne, "=", &context);
 		cParse = strtok_s(NULL, ",", &context);
