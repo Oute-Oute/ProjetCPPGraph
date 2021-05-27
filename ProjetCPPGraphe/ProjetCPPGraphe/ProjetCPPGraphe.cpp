@@ -29,6 +29,8 @@ int main()
 
 		CGraphe graphe(sommets, Test.LECGetNbSommets());
 
+		graphe.GRAModSommet(1,29);
+
 		graphe.GRAAfficherGraphe();
 
 		graphe.GRAInverserGraphe();

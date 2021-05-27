@@ -18,13 +18,13 @@ public:
 	///@return RIEN
 	CGraphe();
 
-	///@brief constructeur de CGraphe de comfort
+	///@brief constructeur de CGraphe de confort
 	///@param pSOMsommets : CSommet** tableau de pointeurs vers les sommets du CGraph
 	///@param uinbSommets : unsigned int correspondant au nombre de sommets du CGraph
 	///@return RIEN
 	CGraphe(CSommet** pSOMsommets, unsigned int uinbSommets);
 
-	///@brief
+	///@brief constructeur de CGraphe de recopie
 	///
 	///
 	CGraphe(const CGraphe &GRAgraphe);
@@ -58,6 +58,11 @@ public:
 	///
 	///
 	void GRAAddSommet(CSommet* pSOMsommet);
+
+	///
+	///
+	///
+	void GRAModSommet(unsigned int uindice, unsigned int uinewIndice);
 
 	///
 	///

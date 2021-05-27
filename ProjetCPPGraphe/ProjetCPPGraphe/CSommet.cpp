@@ -177,16 +177,6 @@ void CSommet::SOMDelArcPartant(unsigned int uidest)
 
 }
 
-void CSommet::SOMRechercherArcArrivant(unsigned int uidest)
-{
-
-}
-
-void CSommet::SOMRechercherArcPartant(unsigned int uidest)
-{
-
-}
-
 void CSommet::SOMInverseTableaux() {
 	
 	CArc** pARCTemp = nullptr;
