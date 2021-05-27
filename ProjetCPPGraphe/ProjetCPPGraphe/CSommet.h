@@ -8,7 +8,6 @@
 
 #include <string>
 #include <iostream>
-#include "CException.h"
 #include "CArc.h"
 
 ///@brief un objet CSommet represent un noeud sur le graph

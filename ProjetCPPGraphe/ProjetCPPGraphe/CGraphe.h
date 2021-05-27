@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 
+#include "CException.h"
 #include "CSommet.h"
 
 class CGraphe
