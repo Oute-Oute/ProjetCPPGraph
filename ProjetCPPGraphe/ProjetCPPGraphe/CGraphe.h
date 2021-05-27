@@ -62,11 +62,6 @@ public:
 	///
 	///
 	///
-	void GRAModSommet(unsigned int uisomm);
-
-	///
-	///
-	///
 	void GRADelSommet(unsigned int uisomm);
 
 	///

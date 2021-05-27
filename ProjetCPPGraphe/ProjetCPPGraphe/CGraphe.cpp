@@ -75,10 +75,6 @@ void CGraphe::GRAAddSommet(CSommet* pSOMsommet)
 	pSOMtabSommets[uinbSommets] = pSOMsommet;
 }
 
-void CGraphe::GRAModSommet(unsigned int uisomm)
-{
-}
-
 void CGraphe::GRADelSommet(unsigned int uisomm)
 {
 	for (unsigned int uicompteSommets = 0 ; uicompteSommets < uinbSommets ; uicompteSommets++) {
