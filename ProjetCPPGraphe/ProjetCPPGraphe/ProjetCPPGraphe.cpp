@@ -7,23 +7,31 @@
 using namespace std;
 
 
-int main()
+int main(int argc, char *argv[])
 {
-    cout << "Hello World!\n";
 	try {
-		
-		char* nf = (char*)"test.txt";
-		CLecture Test(nf);
+		CLecture Test(argv[1]);
 		Test.LECLireFichier();
 
+		unsigned int uiboucleSommets;
+		unsigned int uiboucleArcs;
+
 		CSommet** sommets = new CSommet*[Test.LECGetNbSommets()];
-		for (int i = 0; i < Test.LECGetNbSommets(); i++) {
-			sommets[i] = new CSommet(Test.LECGetSommets()[i]);
+		for (uiboucleSommets = 0; uiboucleSommets < Test.LECGetNbSommets(); uiboucleSommets++) {
+			sommets[uiboucleSommets] = new CSommet(Test.LECGetSommets()[uiboucleSommets]);
 		}
 
-		for (int i = 0; i < Test.LECGetNbArcs(); i++) {
-			sommets[Test.LECGetArcsDepart()[i] - 1]->SOMAddArcPartant(Test.LECGetArcsArrivee()[i]);
-			sommets[Test.LECGetArcsArrivee()[i] - 1]->SOMAddArcArrivant(Test.LECGetArcsDepart()[i]);
+		for (uiboucleArcs = 0; uiboucleArcs < Test.LECGetNbArcs(); uiboucleArcs++) {
+			for (int i = 0; i < Test.LECGetNbSommets(); i++) {
+				if (sommets[i]->SOMGetIndice() == Test.LECGetArcsDepart()[uiboucleArcs]) {
+					sommets[i]->SOMAddArcPartant(Test.LECGetArcsArrivee()[uiboucleArcs]);
+				}
+				if (sommets[i]->SOMGetIndice() == Test.LECGetArcsArrivee()[uiboucleArcs]) {
+					sommets[i]->SOMAddArcArrivant(Test.LECGetArcsDepart()[uiboucleArcs]);
+				}
+			}
+			//sommets[Test.LECGetArcsDepart()[uiboucleArcs] - 1]->SOMAddArcPartant(Test.LECGetArcsArrivee()[uiboucleArcs]);
+			//sommets[Test.LECGetArcsArrivee()[uiboucleArcs] - 1]->SOMAddArcArrivant(Test.LECGetArcsDepart()[uiboucleArcs]);
 		}
 
 
@@ -35,10 +43,11 @@ int main()
 		std::cout << "/!\\INVERSION DU GRAPHE/!\\" << std::endl;
 
 		graphe.GRAAfficherGraphe();
+		system("pause");
 	}
 		
 	catch (CException *EXCException) {
 		EXCException->EXCAfficherException();
 	}
-
+	return 0;
 }

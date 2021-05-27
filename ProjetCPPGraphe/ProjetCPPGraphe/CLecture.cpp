@@ -8,11 +8,11 @@ using namespace std;
 CLecture::CLecture()
 {
 	pLECnomFichier = nullptr;
-	uinbArcs = 0;
-	uinbSommets = 0;
-	itabArcsArrivee = nullptr;
-	itabArcsDepart = nullptr;
-	itabSommets = nullptr;
+	uiLECnbArcs = 0;
+	uiLECnbSommets = 0;
+	iLECtabArcsArrivee = nullptr;
+	iLECtabArcsDepart = nullptr;
+	iLECtabSommets = nullptr;
 }
 
 ///@brief Constructeur de CLecture en spécifiant un nom de fichier
@@ -29,11 +29,11 @@ CLecture::CLecture(char* cnF)
 CLecture::CLecture(const CLecture &LECLecture)
 {
 	pLECnomFichier = LECLecture.pLECnomFichier;
-	uinbArcs = LECLecture.uinbArcs;
-	uinbSommets = LECLecture.uinbSommets;
-	itabArcsArrivee = LECLecture.itabArcsArrivee;
-	itabArcsDepart = LECLecture.itabArcsDepart;
-	itabSommets = LECLecture.itabSommets;
+	uiLECnbArcs = LECLecture.uiLECnbArcs;
+	uiLECnbSommets = LECLecture.uiLECnbSommets;
+	iLECtabArcsArrivee = LECLecture.iLECtabArcsArrivee;
+	iLECtabArcsDepart = LECLecture.iLECtabArcsDepart;
+	iLECtabSommets = LECLecture.iLECtabSommets;
 }
 
 ///@brief Destructeur de CLecture
@@ -48,7 +48,7 @@ CLecture::~CLecture()
 ///@return uinbSommets
 unsigned int CLecture::LECGetNbSommets()
 {
-	return uinbSommets;
+	return uiLECnbSommets;
 }
 
 ///@brief Getter du nombre d'arcs
@@ -56,7 +56,7 @@ unsigned int CLecture::LECGetNbSommets()
 ///@return uinbArcs
 unsigned int CLecture::LECGetNbArcs()
 {
-	return uinbArcs;
+	return uiLECnbArcs;
 }
 
 ///@brief Getter du tableau de sommets
@@ -64,7 +64,7 @@ unsigned int CLecture::LECGetNbArcs()
 ///@return *itabSommets
 int * CLecture::LECGetSommets()
 {
-	return itabSommets;
+	return iLECtabSommets;
 }
 
 ///@brief Getter du tableau des Arcs Partants
@@ -72,7 +72,7 @@ int * CLecture::LECGetSommets()
 ///@return *itabArcsDepart
 int * CLecture::LECGetArcsDepart()
 {
-	return itabArcsDepart;
+	return iLECtabArcsDepart;
 }
 
 ///@brief Getter du tableau des Arcs d'Arrivée
@@ -80,7 +80,7 @@ int * CLecture::LECGetArcsDepart()
 ///@return*itabArcsArrivee
 int * CLecture::LECGetArcsArrivee()
 {
-	return itabArcsArrivee;
+	return iLECtabArcsArrivee;
 }
 
 ///@brief Setter du nombre de sommets depuis un fichier
@@ -91,10 +91,10 @@ void CLecture::LECSetNbSommets()
 	char cLigne[50];
 	char* cParse;
 	char* context = NULL;
-	fmyFile.getline(cLigne, 50);
+	fLECmyFile.getline(cLigne, 50);
 	cParse = strtok_s(cLigne, "=", &context);
 	cParse = strtok_s(NULL, "=", &context);
-	uinbSommets=(atoi(cParse));
+	uiLECnbSommets=(atoi(cParse));
 	
 }
 
@@ -106,10 +106,10 @@ void CLecture::LECSetNbArcs()
 	char cLigne[50];
 	char* cParse;
 	char* context = NULL;
-	fmyFile.getline(cLigne, 50);
+	fLECmyFile.getline(cLigne, 50);
 	cParse = strtok_s(cLigne, "=", &context);
 	cParse = strtok_s(NULL, "=", &context);
-	uinbArcs=(atoi(cParse));
+	uiLECnbArcs=(atoi(cParse));
 }
 
 ///@brief Setter du tableau de sommets depuis un fichier
@@ -121,18 +121,18 @@ void CLecture::LECSetSommets()
 	char* cParse = new char[50];
 	char* context = NULL;
 	unsigned int uiBoucle;
-	itabSommets = new int[uinbSommets];
-	fmyFile.getline(cLigne, 50);
-	fmyFile.getline(cLigne, 50);
-	for (uiBoucle = 0; uiBoucle < uinbSommets; uiBoucle++) {
+	iLECtabSommets = new int[uiLECnbSommets];
+	fLECmyFile.getline(cLigne, 50);
+	fLECmyFile.getline(cLigne, 50);
+	for (uiBoucle = 0; uiBoucle < uiLECnbSommets; uiBoucle++) {
 		//cParse = strtok_s(cLigne, "\t", &context);
 		cParse = strtok_s(cLigne, "=", &context);
 		cParse = strtok_s(NULL, " ", &context);
-		itabSommets[uiBoucle] = atoi(cParse);
+		iLECtabSommets[uiBoucle] = atoi(cParse);
 		
 
 		
-		fmyFile.getline(cLigne, 50);
+		fLECmyFile.getline(cLigne, 50);
 	}
 }
 
@@ -145,20 +145,20 @@ void CLecture::LECSetArcs()
 	char* cParse = new char[50];
 	char* context = NULL;
 	unsigned int uiBoucle;
-	itabArcsDepart = new int[uinbArcs];
-	itabArcsArrivee = new int[uinbArcs];
-	fmyFile.getline(cLigne, 50);
-	fmyFile.getline(cLigne, 50);
-	for (uiBoucle = 0; uiBoucle < uinbArcs; uiBoucle++) {
+	iLECtabArcsDepart = new int[uiLECnbArcs];
+	iLECtabArcsArrivee = new int[uiLECnbArcs];
+	fLECmyFile.getline(cLigne, 50);
+	fLECmyFile.getline(cLigne, 50);
+	for (uiBoucle = 0; uiBoucle < uiLECnbArcs; uiBoucle++) {
 		//cParse = strtok_s(cLigne, "\t", &context);
 		cParse = strtok_s(cLigne, "=", &context);
 		cParse = strtok_s(NULL, ",", &context);
-		itabArcsDepart[uiBoucle] = atoi(cParse);
+		iLECtabArcsDepart[uiBoucle] = atoi(cParse);
 		cParse = strtok_s(NULL, "=", &context);
 		cParse = strtok_s(NULL, ",", &context);
-		itabArcsArrivee[uiBoucle] = atoi(cParse);
+		iLECtabArcsArrivee[uiBoucle] = atoi(cParse);
 
-		fmyFile.getline(cLigne, 50);
+		fLECmyFile.getline(cLigne, 50);
 	}
 }
 
@@ -172,14 +172,14 @@ void CLecture::LECLireFichier()
 
 	
 	try {
-		fmyFile.open(pLECnomFichier);
+		fLECmyFile.open(pLECnomFichier);
 
-		if (fmyFile.is_open()) {
+		if (fLECmyFile.is_open()) {
 			LECSetNbSommets();
 			LECSetNbArcs();
 			LECSetSommets();
 			LECSetArcs();
-			fmyFile.close();
+			fLECmyFile.close();
 		}
 
 		else {
