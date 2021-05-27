@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 
+#include "CException.h"
 #include "CSommet.h"
 
 class CGraphe
@@ -17,13 +18,13 @@ public:
 	///@return RIEN
 	CGraphe();
 
-	///@brief constructeur de CGraphe de comfort
+	///@brief constructeur de CGraphe de confort
 	///@param pSOMsommets : CSommet** tableau de pointeurs vers les sommets du CGraph
 	///@param uinbSommets : unsigned int correspondant au nombre de sommets du CGraph
 	///@return RIEN
 	CGraphe(CSommet** pSOMsommets, unsigned int uinbSommets);
 
-	///@brief
+	///@brief constructeur de CGraphe de recopie
 	///
 	///
 	CGraphe(const CGraphe &GRAgraphe);
@@ -61,7 +62,7 @@ public:
 	///
 	///
 	///
-	void GRAModSommet(unsigned int uisomm);
+	void GRAModSommet(unsigned int uindice, unsigned int uinewIndice);
 
 	///
 	///

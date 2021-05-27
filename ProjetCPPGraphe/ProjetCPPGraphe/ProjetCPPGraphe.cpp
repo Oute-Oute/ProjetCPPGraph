@@ -37,6 +37,8 @@ int main(int argc, char *argv[])
 
 		CGraphe graphe(sommets, Test.LECGetNbSommets());
 
+		graphe.GRAModSommet(1,29);
+
 		graphe.GRAAfficherGraphe();
 
 		graphe.GRAInverserGraphe();

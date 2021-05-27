@@ -8,7 +8,6 @@
 
 #include <string>
 #include <iostream>
-#include "CException.h"
 #include "CArc.h"
 
 ///@brief un objet CSommet represent un noeud sur le graph
@@ -131,16 +130,6 @@ public:
 	///@param
 	///@return
 	void SOMDelArcPartant(unsigned int uidest);
-
-	///@brief
-	///@param
-	///@return
-	void SOMRechercherArcArrivant(unsigned int uidest);
-
-	///@brief
-	///@param
-	///@return
-	void SOMRechercherArcPartant(unsigned int uidest);
 
 	///
 	///

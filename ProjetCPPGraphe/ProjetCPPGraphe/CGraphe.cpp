@@ -56,6 +56,31 @@ void CGraphe::GRASetnbSommets(unsigned int uinbSommets)
 	this->uinbSommets = uinbSommets;
 }
 
+void CGraphe::GRAModSommet(unsigned int uiindice, unsigned int uinewIndice)
+{
+	if (uiindice != uinewIndice) {
+		CException *EXCException = new CException();
+		EXCException->EXCSetOperation((char*)"modification d'un sommet dans un graphe");
+
+		for (unsigned int uicompteSommets = 0; uicompteSommets < uinbSommets; uicompteSommets++) {
+			if (pSOMtabSommets[uicompteSommets]->SOMGetIndice() == uinewIndice) {
+				EXCException->EXCSetMessage((char*)"le nouvel indice de ce somment existe deja dans ce graphe");
+				throw EXCException;
+			}
+
+		}
+
+		for (unsigned int uicompteSommets = 0; uicompteSommets < uinbSommets; uicompteSommets++) {
+			if (pSOMtabSommets[uicompteSommets]->SOMGetIndice() == uiindice) {
+				pSOMtabSommets[uicompteSommets]->SOMSetIndice(uinewIndice);
+			}
+
+		}
+
+	}
+
+}
+
 void CGraphe::GRAAddSommet(CSommet* pSOMsommet)
 {
 	CException *EXCException = new CException();
@@ -73,10 +98,6 @@ void CGraphe::GRAAddSommet(CSommet* pSOMsommet)
 	realloc(pSOMtabSommets, uinbSommets * sizeof(CSommet*));
 
 	pSOMtabSommets[uinbSommets] = pSOMsommet;
-}
-
-void CGraphe::GRAModSommet(unsigned int uisomm)
-{
 }
 
 void CGraphe::GRADelSommet(unsigned int uisomm)

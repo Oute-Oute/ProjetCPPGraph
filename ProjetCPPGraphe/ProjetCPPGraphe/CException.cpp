@@ -13,7 +13,7 @@ using namespace std;
 ///@param RIEN
 ///@return RIEN
 CException::CException() {
-	pEXCmessage = (char*) "Exception innatendue";
+	pEXCmessage = (char*) "Exception inatendue";
 	pEXCoperation = (char*)"inconnue";
 }
 
