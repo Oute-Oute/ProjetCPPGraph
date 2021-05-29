@@ -1,0 +1,454 @@
+\hypertarget{class_c_sommet}{}\doxysection{CSommet Class Reference}
+\label{class_c_sommet}\index{CSommet@{CSommet}}
+
+
+un objet \mbox{\hyperlink{class_c_sommet}{CSommet}} represent un noeud sur le graph  
+
+
+
+
+{\ttfamily \#include $<$CSommet.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_sommet_aaea2b72c5b90563e6d16d694dcd6a59a}{CSommet}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de \mbox{\hyperlink{class_c_sommet}{CSommet}} par defaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_sommet_aa4015ef6f54a04b6365c077c04d1e323}{CSommet}} (unsigned int uiindice)
+\begin{DoxyCompactList}\small\item\em constructeur de \mbox{\hyperlink{class_c_sommet}{CSommet}} de confort \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_sommet_aacf7922d9f4271367e75d154dcef3288}{$\sim$\+CSommet}} ()
+\begin{DoxyCompactList}\small\item\em destructeur de \mbox{\hyperlink{class_c_sommet}{CSommet}} par defaut \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_sommet_a3910533fbeb62e4808ba967a7a6d8f49}{CSommet}} (const \mbox{\hyperlink{class_c_sommet}{CSommet}} \&SOMsommet)
+\begin{DoxyCompactList}\small\item\em constructeur de \mbox{\hyperlink{class_c_sommet}{CSommet}} de recopie \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_c_sommet_aac9d8d1bb26175a2dadc55c8db6b863b}{SOMGet\+Indice}} ()
+\begin{DoxyCompactList}\small\item\em getter de l’attribut ui\+SOMindice \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_arc}{CArc}} $\ast$$\ast$ \mbox{\hyperlink{class_c_sommet_a27e0f8e7844ca24409a3387558aef1e4}{SOMGet\+Tab\+Arrivants}} ()
+\begin{DoxyCompactList}\small\item\em getter de l’attribut p\+ARCarrivants \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_arc}{CArc}} $\ast$$\ast$ \mbox{\hyperlink{class_c_sommet_a44386f11a845ea54f86b8fdad0b0adbe}{SOMGet\+Tab\+Partants}} ()
+\begin{DoxyCompactList}\small\item\em getter de l’attribut p\+ARCpartants \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_c_sommet_aaf237669bf2b07c7cf81d15f65a24ae9}{SOMGet\+Tab\+Nb\+Departs}} ()
+\begin{DoxyCompactList}\small\item\em getter de l’attribut ui\+SOMnb\+Departs \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_c_sommet_a044cfb7284e432f42b00a723bcefff39}{SOMGet\+TNb\+Arrivees}} ()
+\begin{DoxyCompactList}\small\item\em getter de l’attribut ui\+SOMnb\+Arrivees \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_sommet_aebf96d86a46163dd6840ebb8036ce1d1}{SOMSet\+Indice}} (unsigned int uiindice)
+\begin{DoxyCompactList}\small\item\em setter de l’attribut ui\+SOMindice \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_sommet_ac7525cf7d86561e33e040398e98c4ce9}{SOMSet\+Tab\+Arrivants}} (\mbox{\hyperlink{class_c_arc}{CArc}} $\ast$$\ast$p\+ARCtab)
+\begin{DoxyCompactList}\small\item\em setter de l’attribut p\+ARCarrivants \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_sommet_ac488b075f0b5594b96da22017f8154c1}{SOMSet\+Tab\+Partants}} (\mbox{\hyperlink{class_c_arc}{CArc}} $\ast$$\ast$p\+ARCtab)
+\begin{DoxyCompactList}\small\item\em setter de l’attribut p\+ARCpartants \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_sommet_a9fadc541f68703c628dea202424a9544}{SOMSet\+Tab\+Nb\+Departs}} (unsigned int uinb)
+\begin{DoxyCompactList}\small\item\em setter de l’attribut ui\+SOMnb\+Departs \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_sommet_acf11292839c99d2b044b6b6d9e026292}{SOMSet\+TNb\+Arrivees}} (unsigned int uinb)
+\begin{DoxyCompactList}\small\item\em setter de l’attribut ui\+SOMnb\+Arrivees \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_sommet_a948d253b7cbda6cb79ddbf47d64a4e69}{SOMAdd\+Arc\+Arrivant}} (unsigned int ui\+Indice)
+\begin{DoxyCompactList}\small\item\em ajoute un \mbox{\hyperlink{class_c_arc}{CArc}} entrant depuis le \mbox{\hyperlink{class_c_sommet}{CSommet}} d’indice ui\+Indice dans la table des \mbox{\hyperlink{class_c_arc}{CArc}} partants du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_sommet_a18f0dfa647c1f312e6841dfc405afc61}{SOMAdd\+Arc\+Partant}} (unsigned int ui\+Indice)
+\begin{DoxyCompactList}\small\item\em ajoute un \mbox{\hyperlink{class_c_arc}{CArc}} partant vers le \mbox{\hyperlink{class_c_sommet}{CSommet}} d’indice ui\+Indice dans la table des \mbox{\hyperlink{class_c_arc}{CArc}} arrivants du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_sommet_ad4622fe90b6a0224a5e6b4d8cba4334e}{SOMMod\+Arc\+Arrivant}} (unsigned int ui\+Indice, unsigned int ui\+Nouvel\+Indice)
+\begin{DoxyCompactList}\small\item\em modifie l’arc entrant venant du sommet d’indice ui\+Indice, cet arc vient par la suite du sommet d’indice ui\+Nouvel\+Indice details ATTENTION\+: cette methode ne modifie pas les arcs sortants d’autres CSommets que le \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel, nous considérons que la modification de ceux-\/ci dépend de l’utilisation souhaitée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_sommet_a0853a13a4b52135876a502a9f796dbff}{SOMMod\+Arc\+Partant}} (unsigned int ui\+Indice, unsigned int ui\+Nouvel\+Indice)
+\begin{DoxyCompactList}\small\item\em modifie l’arc sortant allant vers sommet d’indice ui\+Indice, cet arc va par la suite vers le sommet d’indice ui\+Nouvel\+Indice details ATTENTION\+: cette methode ne modifie pas les arcs entrants d’autres CSommets que le \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel, nous considérons que la modification de ceux-\/ci dépend de l’utilisation souhaitée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_sommet_a89c3876104e3eb2d9aab182bd9536ef5}{SOMDel\+Arc\+Arrivant}} (unsigned int uidest)
+\begin{DoxyCompactList}\small\item\em supprime le \mbox{\hyperlink{class_c_arc}{CArc}} entrant depuis le \mbox{\hyperlink{class_c_sommet}{CSommet}} d’indice uidest de la table des \mbox{\hyperlink{class_c_arc}{CArc}} entrants du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_sommet_af49d56a04be02980b94cd4a23369db5a}{SOMDel\+Arc\+Partant}} (unsigned int uidest)
+\begin{DoxyCompactList}\small\item\em supprime le \mbox{\hyperlink{class_c_arc}{CArc}} sortant vers le \mbox{\hyperlink{class_c_sommet}{CSommet}} d’indice uidest de la table des \mbox{\hyperlink{class_c_arc}{CArc}} sortants du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_sommet_abf98ac9b4924c687c20b3ba53e541664}{SOMInverse\+Tableaux}} ()
+\begin{DoxyCompactList}\small\item\em inverse les tableaux de CArcs entrants et sortants du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+un objet \mbox{\hyperlink{class_c_sommet}{CSommet}} represent un noeud sur le graph 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_sommet_aaea2b72c5b90563e6d16d694dcd6a59a}\label{class_c_sommet_aaea2b72c5b90563e6d16d694dcd6a59a}} 
+\index{CSommet@{CSommet}!CSommet@{CSommet}}
+\index{CSommet@{CSommet}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{CSommet()}{CSommet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily CSommet\+::\+CSommet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur de \mbox{\hyperlink{class_c_sommet}{CSommet}} par defaut. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_aa4015ef6f54a04b6365c077c04d1e323}\label{class_c_sommet_aa4015ef6f54a04b6365c077c04d1e323}} 
+\index{CSommet@{CSommet}!CSommet@{CSommet}}
+\index{CSommet@{CSommet}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{CSommet()}{CSommet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily CSommet\+::\+CSommet (\begin{DoxyParamCaption}\item[{unsigned int}]{uiindice }\end{DoxyParamCaption})}
+
+
+
+constructeur de \mbox{\hyperlink{class_c_sommet}{CSommet}} de confort 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int uiindice \+: indice du nouveau \mbox{\hyperlink{class_c_sommet}{CSommet}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_aacf7922d9f4271367e75d154dcef3288}\label{class_c_sommet_aacf7922d9f4271367e75d154dcef3288}} 
+\index{CSommet@{CSommet}!````~CSommet@{$\sim$CSommet}}
+\index{````~CSommet@{$\sim$CSommet}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{$\sim$CSommet()}{~CSommet()}}
+{\footnotesize\ttfamily CSommet\+::$\sim$\+CSommet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+destructeur de \mbox{\hyperlink{class_c_sommet}{CSommet}} par defaut 
+
+\begin{DoxyReturn}{Returns}
+RIEN 
+
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_a3910533fbeb62e4808ba967a7a6d8f49}\label{class_c_sommet_a3910533fbeb62e4808ba967a7a6d8f49}} 
+\index{CSommet@{CSommet}!CSommet@{CSommet}}
+\index{CSommet@{CSommet}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{CSommet()}{CSommet()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily CSommet\+::\+CSommet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_sommet}{CSommet}} \&}]{SOMsommet }\end{DoxyParamCaption})}
+
+
+
+constructeur de \mbox{\hyperlink{class_c_sommet}{CSommet}} de recopie 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & \mbox{\hyperlink{class_c_sommet}{CSommet}} \&SOMsommet \+: \mbox{\hyperlink{class_c_sommet}{CSommet}} a copier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_sommet_a948d253b7cbda6cb79ddbf47d64a4e69}\label{class_c_sommet_a948d253b7cbda6cb79ddbf47d64a4e69}} 
+\index{CSommet@{CSommet}!SOMAddArcArrivant@{SOMAddArcArrivant}}
+\index{SOMAddArcArrivant@{SOMAddArcArrivant}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMAddArcArrivant()}{SOMAddArcArrivant()}}
+{\footnotesize\ttfamily void CSommet\+::\+SOMAdd\+Arc\+Arrivant (\begin{DoxyParamCaption}\item[{unsigned int}]{ui\+Indice }\end{DoxyParamCaption})}
+
+
+
+ajoute un \mbox{\hyperlink{class_c_arc}{CArc}} entrant depuis le \mbox{\hyperlink{class_c_sommet}{CSommet}} d’indice ui\+Indice dans la table des \mbox{\hyperlink{class_c_arc}{CArc}} partants du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int ui\+Indice \+: indice du \mbox{\hyperlink{class_c_sommet}{CSommet}} depuis lequel le nouveau \mbox{\hyperlink{class_c_arc}{CArc}} arrive (cet indice peut ne pas exister) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_a18f0dfa647c1f312e6841dfc405afc61}\label{class_c_sommet_a18f0dfa647c1f312e6841dfc405afc61}} 
+\index{CSommet@{CSommet}!SOMAddArcPartant@{SOMAddArcPartant}}
+\index{SOMAddArcPartant@{SOMAddArcPartant}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMAddArcPartant()}{SOMAddArcPartant()}}
+{\footnotesize\ttfamily void CSommet\+::\+SOMAdd\+Arc\+Partant (\begin{DoxyParamCaption}\item[{unsigned int}]{ui\+Indice }\end{DoxyParamCaption})}
+
+
+
+ajoute un \mbox{\hyperlink{class_c_arc}{CArc}} partant vers le \mbox{\hyperlink{class_c_sommet}{CSommet}} d’indice ui\+Indice dans la table des \mbox{\hyperlink{class_c_arc}{CArc}} arrivants du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int ui\+Indice \+: indice du \mbox{\hyperlink{class_c_sommet}{CSommet}} vers lequel le nouveau \mbox{\hyperlink{class_c_arc}{CArc}} est dirige (cet indice peut ne pas exister) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_a89c3876104e3eb2d9aab182bd9536ef5}\label{class_c_sommet_a89c3876104e3eb2d9aab182bd9536ef5}} 
+\index{CSommet@{CSommet}!SOMDelArcArrivant@{SOMDelArcArrivant}}
+\index{SOMDelArcArrivant@{SOMDelArcArrivant}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMDelArcArrivant()}{SOMDelArcArrivant()}}
+{\footnotesize\ttfamily void CSommet\+::\+SOMDel\+Arc\+Arrivant (\begin{DoxyParamCaption}\item[{unsigned int}]{uidest }\end{DoxyParamCaption})}
+
+
+
+supprime le \mbox{\hyperlink{class_c_arc}{CArc}} entrant depuis le \mbox{\hyperlink{class_c_sommet}{CSommet}} d’indice uidest de la table des \mbox{\hyperlink{class_c_arc}{CArc}} entrants du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int uidest \+: indice du \mbox{\hyperlink{class_c_sommet}{CSommet}} de provenance du \mbox{\hyperlink{class_c_arc}{CArc}} a supprimer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_af49d56a04be02980b94cd4a23369db5a}\label{class_c_sommet_af49d56a04be02980b94cd4a23369db5a}} 
+\index{CSommet@{CSommet}!SOMDelArcPartant@{SOMDelArcPartant}}
+\index{SOMDelArcPartant@{SOMDelArcPartant}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMDelArcPartant()}{SOMDelArcPartant()}}
+{\footnotesize\ttfamily void CSommet\+::\+SOMDel\+Arc\+Partant (\begin{DoxyParamCaption}\item[{unsigned int}]{uidest }\end{DoxyParamCaption})}
+
+
+
+supprime le \mbox{\hyperlink{class_c_arc}{CArc}} sortant vers le \mbox{\hyperlink{class_c_sommet}{CSommet}} d’indice uidest de la table des \mbox{\hyperlink{class_c_arc}{CArc}} sortants du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int uidest \+: indice du \mbox{\hyperlink{class_c_sommet}{CSommet}} destination du \mbox{\hyperlink{class_c_arc}{CArc}} a supprimer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_aac9d8d1bb26175a2dadc55c8db6b863b}\label{class_c_sommet_aac9d8d1bb26175a2dadc55c8db6b863b}} 
+\index{CSommet@{CSommet}!SOMGetIndice@{SOMGetIndice}}
+\index{SOMGetIndice@{SOMGetIndice}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMGetIndice()}{SOMGetIndice()}}
+{\footnotesize\ttfamily unsigned int CSommet\+::\+SOMGet\+Indice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de l’attribut ui\+SOMindice 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned int ui\+SOMindice \+: indice du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_a27e0f8e7844ca24409a3387558aef1e4}\label{class_c_sommet_a27e0f8e7844ca24409a3387558aef1e4}} 
+\index{CSommet@{CSommet}!SOMGetTabArrivants@{SOMGetTabArrivants}}
+\index{SOMGetTabArrivants@{SOMGetTabArrivants}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMGetTabArrivants()}{SOMGetTabArrivants()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_arc}{CArc}} $\ast$$\ast$ CSommet\+::\+SOMGet\+Tab\+Arrivants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de l’attribut p\+ARCarrivants 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CArc$\ast$$\ast$ p\+ARCarrivants \+: tableau des CArcs entrants du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_aaf237669bf2b07c7cf81d15f65a24ae9}\label{class_c_sommet_aaf237669bf2b07c7cf81d15f65a24ae9}} 
+\index{CSommet@{CSommet}!SOMGetTabNbDeparts@{SOMGetTabNbDeparts}}
+\index{SOMGetTabNbDeparts@{SOMGetTabNbDeparts}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMGetTabNbDeparts()}{SOMGetTabNbDeparts()}}
+{\footnotesize\ttfamily unsigned int CSommet\+::\+SOMGet\+Tab\+Nb\+Departs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de l’attribut ui\+SOMnb\+Departs 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned int ui\+SOMnb\+Departs \+: nombre de CArcs sortants du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_a44386f11a845ea54f86b8fdad0b0adbe}\label{class_c_sommet_a44386f11a845ea54f86b8fdad0b0adbe}} 
+\index{CSommet@{CSommet}!SOMGetTabPartants@{SOMGetTabPartants}}
+\index{SOMGetTabPartants@{SOMGetTabPartants}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMGetTabPartants()}{SOMGetTabPartants()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_arc}{CArc}} $\ast$$\ast$ CSommet\+::\+SOMGet\+Tab\+Partants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de l’attribut p\+ARCpartants 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CArc$\ast$$\ast$ p\+ARCpartants \+: tableau des Carc partants du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_a044cfb7284e432f42b00a723bcefff39}\label{class_c_sommet_a044cfb7284e432f42b00a723bcefff39}} 
+\index{CSommet@{CSommet}!SOMGetTNbArrivees@{SOMGetTNbArrivees}}
+\index{SOMGetTNbArrivees@{SOMGetTNbArrivees}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMGetTNbArrivees()}{SOMGetTNbArrivees()}}
+{\footnotesize\ttfamily unsigned int CSommet\+::\+SOMGet\+TNb\+Arrivees (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de l’attribut ui\+SOMnb\+Arrivees 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned int ui\+SOMnb\+Arrivees \+: nombre de CArcs entrants dans le \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_abf98ac9b4924c687c20b3ba53e541664}\label{class_c_sommet_abf98ac9b4924c687c20b3ba53e541664}} 
+\index{CSommet@{CSommet}!SOMInverseTableaux@{SOMInverseTableaux}}
+\index{SOMInverseTableaux@{SOMInverseTableaux}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMInverseTableaux()}{SOMInverseTableaux()}}
+{\footnotesize\ttfamily void CSommet\+::\+SOMInverse\+Tableaux (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+inverse les tableaux de CArcs entrants et sortants du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_ad4622fe90b6a0224a5e6b4d8cba4334e}\label{class_c_sommet_ad4622fe90b6a0224a5e6b4d8cba4334e}} 
+\index{CSommet@{CSommet}!SOMModArcArrivant@{SOMModArcArrivant}}
+\index{SOMModArcArrivant@{SOMModArcArrivant}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMModArcArrivant()}{SOMModArcArrivant()}}
+{\footnotesize\ttfamily void CSommet\+::\+SOMMod\+Arc\+Arrivant (\begin{DoxyParamCaption}\item[{unsigned int}]{ui\+Indice,  }\item[{unsigned int}]{ui\+Nouvel\+Indice }\end{DoxyParamCaption})}
+
+
+
+modifie l’arc entrant venant du sommet d’indice ui\+Indice, cet arc vient par la suite du sommet d’indice ui\+Nouvel\+Indice details ATTENTION\+: cette methode ne modifie pas les arcs sortants d’autres CSommets que le \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel, nous considérons que la modification de ceux-\/ci dépend de l’utilisation souhaitée. 
+
+modifie l’arc entrant venant du sommet d’indice ui\+Indice, cet arc vient par la suite du sommet d’indice ui\+Nouvel\+Indice
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int ui\+Indice \+: indice du \mbox{\hyperlink{class_c_sommet}{CSommet}} de provenance actuel du \mbox{\hyperlink{class_c_arc}{CArc}} a modifier \\
+\hline
+{\em unsigned} & int ui\+Nouvel\+Indice \+: indice du nouveau \mbox{\hyperlink{class_c_sommet}{CSommet}} qu\textquotesingle{}on assigne comme prevenance du \mbox{\hyperlink{class_c_arc}{CArc}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_a0853a13a4b52135876a502a9f796dbff}\label{class_c_sommet_a0853a13a4b52135876a502a9f796dbff}} 
+\index{CSommet@{CSommet}!SOMModArcPartant@{SOMModArcPartant}}
+\index{SOMModArcPartant@{SOMModArcPartant}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMModArcPartant()}{SOMModArcPartant()}}
+{\footnotesize\ttfamily void CSommet\+::\+SOMMod\+Arc\+Partant (\begin{DoxyParamCaption}\item[{unsigned int}]{ui\+Indice,  }\item[{unsigned int}]{ui\+Nouvel\+Indice }\end{DoxyParamCaption})}
+
+
+
+modifie l’arc sortant allant vers sommet d’indice ui\+Indice, cet arc va par la suite vers le sommet d’indice ui\+Nouvel\+Indice details ATTENTION\+: cette methode ne modifie pas les arcs entrants d’autres CSommets que le \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel, nous considérons que la modification de ceux-\/ci dépend de l’utilisation souhaitée. 
+
+modifie l’arc sortant allant vers sommet d’indice ui\+Indice, cet arc va par la suite vers le sommet d’indice ui\+Nouvel\+Indice detail ATTENTION\+: cette methode ne modifie pas les arcs entrants ou sortants d’autres CSommets que le \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel, nous considérons que la modification de ceux-\/ci dépend de l’utilisation souhaitée.
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int ui\+Indice \+: indice du \mbox{\hyperlink{class_c_sommet}{CSommet}} destination actuel du \mbox{\hyperlink{class_c_arc}{CArc}} a modifier \\
+\hline
+{\em unsigned} & int ui\+Nouvel\+Indice \+: indice du nouveau \mbox{\hyperlink{class_c_sommet}{CSommet}} qu\textquotesingle{}on assigne comme destination au \mbox{\hyperlink{class_c_arc}{CArc}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_aebf96d86a46163dd6840ebb8036ce1d1}\label{class_c_sommet_aebf96d86a46163dd6840ebb8036ce1d1}} 
+\index{CSommet@{CSommet}!SOMSetIndice@{SOMSetIndice}}
+\index{SOMSetIndice@{SOMSetIndice}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMSetIndice()}{SOMSetIndice()}}
+{\footnotesize\ttfamily void CSommet\+::\+SOMSet\+Indice (\begin{DoxyParamCaption}\item[{unsigned int}]{uiindice }\end{DoxyParamCaption})}
+
+
+
+setter de l’attribut ui\+SOMindice 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int uiindice \+: nouvel indice du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_ac7525cf7d86561e33e040398e98c4ce9}\label{class_c_sommet_ac7525cf7d86561e33e040398e98c4ce9}} 
+\index{CSommet@{CSommet}!SOMSetTabArrivants@{SOMSetTabArrivants}}
+\index{SOMSetTabArrivants@{SOMSetTabArrivants}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMSetTabArrivants()}{SOMSetTabArrivants()}}
+{\footnotesize\ttfamily void CSommet\+::\+SOMSet\+Tab\+Arrivants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_arc}{CArc}} $\ast$$\ast$}]{p\+ARCtab }\end{DoxyParamCaption})}
+
+
+
+setter de l’attribut p\+ARCarrivants 
+
+
+\begin{DoxyParams}{Parameters}
+{\em CArc$\ast$$\ast$} & p\+ARCtab\+: nouveau tableau des \mbox{\hyperlink{class_c_arc}{CArc}} arrivants du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_a9fadc541f68703c628dea202424a9544}\label{class_c_sommet_a9fadc541f68703c628dea202424a9544}} 
+\index{CSommet@{CSommet}!SOMSetTabNbDeparts@{SOMSetTabNbDeparts}}
+\index{SOMSetTabNbDeparts@{SOMSetTabNbDeparts}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMSetTabNbDeparts()}{SOMSetTabNbDeparts()}}
+{\footnotesize\ttfamily void CSommet\+::\+SOMSet\+Tab\+Nb\+Departs (\begin{DoxyParamCaption}\item[{unsigned int}]{uinb }\end{DoxyParamCaption})}
+
+
+
+setter de l’attribut ui\+SOMnb\+Departs 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int uinb \+: nouveau nombre de \mbox{\hyperlink{class_c_arc}{CArc}} partants du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_ac488b075f0b5594b96da22017f8154c1}\label{class_c_sommet_ac488b075f0b5594b96da22017f8154c1}} 
+\index{CSommet@{CSommet}!SOMSetTabPartants@{SOMSetTabPartants}}
+\index{SOMSetTabPartants@{SOMSetTabPartants}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMSetTabPartants()}{SOMSetTabPartants()}}
+{\footnotesize\ttfamily void CSommet\+::\+SOMSet\+Tab\+Partants (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_arc}{CArc}} $\ast$$\ast$}]{p\+ARCtab }\end{DoxyParamCaption})}
+
+
+
+setter de l’attribut p\+ARCpartants 
+
+
+\begin{DoxyParams}{Parameters}
+{\em CArc$\ast$$\ast$} & p\+ARCtab \+: nouveau tableau des \mbox{\hyperlink{class_c_arc}{CArc}} partants du \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_sommet_acf11292839c99d2b044b6b6d9e026292}\label{class_c_sommet_acf11292839c99d2b044b6b6d9e026292}} 
+\index{CSommet@{CSommet}!SOMSetTNbArrivees@{SOMSetTNbArrivees}}
+\index{SOMSetTNbArrivees@{SOMSetTNbArrivees}!CSommet@{CSommet}}
+\doxysubsubsection{\texorpdfstring{SOMSetTNbArrivees()}{SOMSetTNbArrivees()}}
+{\footnotesize\ttfamily void CSommet\+::\+SOMSet\+TNb\+Arrivees (\begin{DoxyParamCaption}\item[{unsigned int}]{uinb }\end{DoxyParamCaption})}
+
+
+
+setter de l’attribut ui\+SOMnb\+Arrivees 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int uinb \+: nouveau nombre de \mbox{\hyperlink{class_c_arc}{CArc}} arrivants au \mbox{\hyperlink{class_c_sommet}{CSommet}} actuel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projet\+CPPGraphe/\mbox{\hyperlink{_c_sommet_8h}{CSommet.\+h}}\item 
+Projet\+CPPGraphe/\mbox{\hyperlink{_c_sommet_8cpp}{CSommet.\+cpp}}\end{DoxyCompactItemize}

@@ -47,5 +47,4 @@ public:
 	///@param uiDestination : unsigned int Destionation souhaitee
 	///@return RIEN
 	void ARCSetDestination(unsigned int uiDestination);
-
 };

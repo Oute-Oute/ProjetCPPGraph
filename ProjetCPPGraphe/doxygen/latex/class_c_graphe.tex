@@ -1,0 +1,315 @@
+\hypertarget{class_c_graphe}{}\doxysection{CGraphe Class Reference}
+\label{class_c_graphe}\index{CGraphe@{CGraphe}}
+
+
+la classe \mbox{\hyperlink{class_c_graphe}{CGraphe}} represente un graphique contenant des sommets et des arcs qui les relient  
+
+
+
+
+{\ttfamily \#include $<$CGraphe.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_graphe_aec39f66e0a4031aa18f071d9d52db8fe}{CGraphe}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de CGraph par defaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_graphe_ae61570b0dba17040df95b08f6375a65b}{CGraphe}} (\mbox{\hyperlink{class_c_sommet}{CSommet}} $\ast$$\ast$p\+SOMsommets, unsigned int uinb\+Sommets)
+\begin{DoxyCompactList}\small\item\em constructeur de \mbox{\hyperlink{class_c_graphe}{CGraphe}} confort \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_graphe_ae835abc3fb602324c66f587da4c1fd46}{CGraphe}} (const \mbox{\hyperlink{class_c_graphe}{CGraphe}} \&GRAgraphe)
+\begin{DoxyCompactList}\small\item\em constructeur de \mbox{\hyperlink{class_c_graphe}{CGraphe}} de recopie \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_graphe_a0cfe3680a60bdc406a082b639db9cbb9}{$\sim$\+CGraphe}} ()
+\begin{DoxyCompactList}\small\item\em destructeur de \mbox{\hyperlink{class_c_graphe}{CGraphe}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_sommet}{CSommet}} $\ast$$\ast$ \mbox{\hyperlink{class_c_graphe_a8f9f03954582e550e0fb4ee12671c699}{GRAGet\+Tab\+Sommets}} ()
+\begin{DoxyCompactList}\small\item\em getter de l’attribut p\+SOMtab\+Sommets \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_c_graphe_a80520c905e8019ed3e1a6916eb113034}{GRAGetnb\+Sommets}} ()
+\begin{DoxyCompactList}\small\item\em getter de l’attribut uinb\+Sommets \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_graphe_a05afc75477653275b14e5594ba6e224e}{GRASet\+Tab\+Sommets}} (\mbox{\hyperlink{class_c_sommet}{CSommet}} $\ast$$\ast$ptab\+Sommets)
+\begin{DoxyCompactList}\small\item\em setter de l’attribut p\+SOMtab\+Sommets \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_graphe_ade8dae4622c487705e46e9c17cb3e748}{GRASetnb\+Sommets}} (unsigned int uinb\+Sommets)
+\begin{DoxyCompactList}\small\item\em setter setter de l’attribut uinb\+Sommets \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_graphe_aba39cfddd1530b4e8bfabec8cf01c1cf}{GRAAdd\+Sommet}} (\mbox{\hyperlink{class_c_sommet}{CSommet}} $\ast$p\+SOMsommet)
+\begin{DoxyCompactList}\small\item\em ajoute le sommet au graphe \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_graphe_ab05ecaa95574ffa074d46b2a88302130}{GRAMod\+Sommet}} (unsigned int uindice, unsigned int uinew\+Indice)
+\begin{DoxyCompactList}\small\item\em modifie le sommet d’indice uiindice du graphe actuel, on lui donne l’indice uinew\+Indice \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_graphe_a515d67f305305f989d80b2bdc516d691}{GRADel\+Sommet}} (unsigned int uisomm)
+\begin{DoxyCompactList}\small\item\em retire le \mbox{\hyperlink{class_c_sommet}{CSommet}} d’indice uisomm du \mbox{\hyperlink{class_c_graphe}{CGraphe}} actuel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_graphe_a29ffddea48d65cda735524b75623a786}{GRAAfficher\+Graphe}} ()
+\begin{DoxyCompactList}\small\item\em affiche le graphique dans la sortie par défaut \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_graphe_ad92e15f99ed541aa8e5f77bc4dfbdfa8}{GRAInverser\+Graphe}} ()
+\begin{DoxyCompactList}\small\item\em inverse tous les arcs du graphe actuel \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+la classe \mbox{\hyperlink{class_c_graphe}{CGraphe}} represente un graphique contenant des sommets et des arcs qui les relient 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_graphe_aec39f66e0a4031aa18f071d9d52db8fe}\label{class_c_graphe_aec39f66e0a4031aa18f071d9d52db8fe}} 
+\index{CGraphe@{CGraphe}!CGraphe@{CGraphe}}
+\index{CGraphe@{CGraphe}!CGraphe@{CGraphe}}
+\doxysubsubsection{\texorpdfstring{CGraphe()}{CGraphe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily CGraphe\+::\+CGraphe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur de CGraph par defaut. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_graphe_ae61570b0dba17040df95b08f6375a65b}\label{class_c_graphe_ae61570b0dba17040df95b08f6375a65b}} 
+\index{CGraphe@{CGraphe}!CGraphe@{CGraphe}}
+\index{CGraphe@{CGraphe}!CGraphe@{CGraphe}}
+\doxysubsubsection{\texorpdfstring{CGraphe()}{CGraphe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily CGraphe\+::\+CGraphe (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_sommet}{CSommet}} $\ast$$\ast$}]{p\+SOMsommets,  }\item[{unsigned int}]{uinb\+Sommets }\end{DoxyParamCaption})}
+
+
+
+constructeur de \mbox{\hyperlink{class_c_graphe}{CGraphe}} confort 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+SOMsommets} & \+: CSommet$\ast$$\ast$ tableau de pointeurs vers les sommets du CGraph \\
+\hline
+{\em uinb\+Sommets} & \+: unsigned int correspondant au nombre de sommets du CGraph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_graphe_ae835abc3fb602324c66f587da4c1fd46}\label{class_c_graphe_ae835abc3fb602324c66f587da4c1fd46}} 
+\index{CGraphe@{CGraphe}!CGraphe@{CGraphe}}
+\index{CGraphe@{CGraphe}!CGraphe@{CGraphe}}
+\doxysubsubsection{\texorpdfstring{CGraphe()}{CGraphe()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily CGraphe\+::\+CGraphe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_graphe}{CGraphe}} \&}]{GRAgraphe }\end{DoxyParamCaption})}
+
+
+
+constructeur de \mbox{\hyperlink{class_c_graphe}{CGraphe}} de recopie 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_c_graphe}{CGraphe}}} & \&GRAgraphe \+: \mbox{\hyperlink{class_c_graphe}{CGraphe}} a recopier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_graphe_a0cfe3680a60bdc406a082b639db9cbb9}\label{class_c_graphe_a0cfe3680a60bdc406a082b639db9cbb9}} 
+\index{CGraphe@{CGraphe}!````~CGraphe@{$\sim$CGraphe}}
+\index{````~CGraphe@{$\sim$CGraphe}!CGraphe@{CGraphe}}
+\doxysubsubsection{\texorpdfstring{$\sim$CGraphe()}{~CGraphe()}}
+{\footnotesize\ttfamily CGraphe\+::$\sim$\+CGraphe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+destructeur de \mbox{\hyperlink{class_c_graphe}{CGraphe}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_graphe_aba39cfddd1530b4e8bfabec8cf01c1cf}\label{class_c_graphe_aba39cfddd1530b4e8bfabec8cf01c1cf}} 
+\index{CGraphe@{CGraphe}!GRAAddSommet@{GRAAddSommet}}
+\index{GRAAddSommet@{GRAAddSommet}!CGraphe@{CGraphe}}
+\doxysubsubsection{\texorpdfstring{GRAAddSommet()}{GRAAddSommet()}}
+{\footnotesize\ttfamily void CGraphe\+::\+GRAAdd\+Sommet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_sommet}{CSommet}} $\ast$}]{p\+SOMsommet }\end{DoxyParamCaption})}
+
+
+
+ajoute le sommet au graphe 
+
+
+\begin{DoxyParams}{Parameters}
+{\em CSommet$\ast$} & p\+SOMsommet \+: pointeur vers le \mbox{\hyperlink{class_c_sommet}{CSommet}} a ajouter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_graphe_a29ffddea48d65cda735524b75623a786}\label{class_c_graphe_a29ffddea48d65cda735524b75623a786}} 
+\index{CGraphe@{CGraphe}!GRAAfficherGraphe@{GRAAfficherGraphe}}
+\index{GRAAfficherGraphe@{GRAAfficherGraphe}!CGraphe@{CGraphe}}
+\doxysubsubsection{\texorpdfstring{GRAAfficherGraphe()}{GRAAfficherGraphe()}}
+{\footnotesize\ttfamily void CGraphe\+::\+GRAAfficher\+Graphe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+affiche le graphique dans la sortie par défaut 
+
+affiche le graphique dans la sortie par défaut @detail affichage du nombre de sommets, leurs indices et les arcs sortants de chaque sommets
+
+affichage du nombre de sommets, leurs indices et les arcs sortants de chaque sommets 
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_graphe_a515d67f305305f989d80b2bdc516d691}\label{class_c_graphe_a515d67f305305f989d80b2bdc516d691}} 
+\index{CGraphe@{CGraphe}!GRADelSommet@{GRADelSommet}}
+\index{GRADelSommet@{GRADelSommet}!CGraphe@{CGraphe}}
+\doxysubsubsection{\texorpdfstring{GRADelSommet()}{GRADelSommet()}}
+{\footnotesize\ttfamily void CGraphe\+::\+GRADel\+Sommet (\begin{DoxyParamCaption}\item[{unsigned int}]{uisomm }\end{DoxyParamCaption})}
+
+
+
+retire le \mbox{\hyperlink{class_c_sommet}{CSommet}} d’indice uisomm du \mbox{\hyperlink{class_c_graphe}{CGraphe}} actuel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int uisomm \+: indice du \mbox{\hyperlink{class_c_sommet}{CSommet}} a retirer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_graphe_a80520c905e8019ed3e1a6916eb113034}\label{class_c_graphe_a80520c905e8019ed3e1a6916eb113034}} 
+\index{CGraphe@{CGraphe}!GRAGetnbSommets@{GRAGetnbSommets}}
+\index{GRAGetnbSommets@{GRAGetnbSommets}!CGraphe@{CGraphe}}
+\doxysubsubsection{\texorpdfstring{GRAGetnbSommets()}{GRAGetnbSommets()}}
+{\footnotesize\ttfamily unsigned int CGraphe\+::\+GRAGetnb\+Sommets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de l’attribut uinb\+Sommets 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned int uinb\+Sommets \+: nombre de sommets du \mbox{\hyperlink{class_c_graphe}{CGraphe}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_graphe_a8f9f03954582e550e0fb4ee12671c699}\label{class_c_graphe_a8f9f03954582e550e0fb4ee12671c699}} 
+\index{CGraphe@{CGraphe}!GRAGetTabSommets@{GRAGetTabSommets}}
+\index{GRAGetTabSommets@{GRAGetTabSommets}!CGraphe@{CGraphe}}
+\doxysubsubsection{\texorpdfstring{GRAGetTabSommets()}{GRAGetTabSommets()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_sommet}{CSommet}} $\ast$$\ast$ CGraphe\+::\+GRAGet\+Tab\+Sommets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+getter de l’attribut p\+SOMtab\+Sommets 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CSommet$\ast$$\ast$ p\+SOMtab\+Sommets \+: tableau des sommets du \mbox{\hyperlink{class_c_graphe}{CGraphe}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_graphe_ad92e15f99ed541aa8e5f77bc4dfbdfa8}\label{class_c_graphe_ad92e15f99ed541aa8e5f77bc4dfbdfa8}} 
+\index{CGraphe@{CGraphe}!GRAInverserGraphe@{GRAInverserGraphe}}
+\index{GRAInverserGraphe@{GRAInverserGraphe}!CGraphe@{CGraphe}}
+\doxysubsubsection{\texorpdfstring{GRAInverserGraphe()}{GRAInverserGraphe()}}
+{\footnotesize\ttfamily void CGraphe\+::\+GRAInverser\+Graphe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+inverse tous les arcs du graphe actuel 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_graphe_ab05ecaa95574ffa074d46b2a88302130}\label{class_c_graphe_ab05ecaa95574ffa074d46b2a88302130}} 
+\index{CGraphe@{CGraphe}!GRAModSommet@{GRAModSommet}}
+\index{GRAModSommet@{GRAModSommet}!CGraphe@{CGraphe}}
+\doxysubsubsection{\texorpdfstring{GRAModSommet()}{GRAModSommet()}}
+{\footnotesize\ttfamily void CGraphe\+::\+GRAMod\+Sommet (\begin{DoxyParamCaption}\item[{unsigned int}]{uiindice,  }\item[{unsigned int}]{uinew\+Indice }\end{DoxyParamCaption})}
+
+
+
+modifie le sommet d’indice uiindice du graphe actuel, on lui donne l’indice uinew\+Indice 
+
+modifie le sommet d’indice uiindice du graphe actuel, on lui donne l’indice uinew\+Indice @detail ATTENTION \+: cette méthode ne modifie pas les tableaux d’arcs partants et arrivants des autres sommets, nous considérons que la modification de ceux-\/ci dépend de l’utilisation souhaitée
+
+ATTENTION \+: cette méthode ne modifie pas les tableaux d’arcs partants et arrivants des autres sommets, nous considérons que la modification de ceux-\/ci dépend de l’utilisation souhaitée 
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int uindice \+: indice du \mbox{\hyperlink{class_c_sommet}{CSommet}} a modifier \\
+\hline
+{\em unsigned} & int uinew\+Indice \+: nouvel indice assigne au \mbox{\hyperlink{class_c_sommet}{CSommet}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int uindice \+: indice du \mbox{\hyperlink{class_c_sommet}{CSommet}} a modifier \\
+\hline
+{\em unsigned} & int uinew\+Indice \+: nouvel indice assigne au \mbox{\hyperlink{class_c_sommet}{CSommet}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_graphe_ade8dae4622c487705e46e9c17cb3e748}\label{class_c_graphe_ade8dae4622c487705e46e9c17cb3e748}} 
+\index{CGraphe@{CGraphe}!GRASetnbSommets@{GRASetnbSommets}}
+\index{GRASetnbSommets@{GRASetnbSommets}!CGraphe@{CGraphe}}
+\doxysubsubsection{\texorpdfstring{GRASetnbSommets()}{GRASetnbSommets()}}
+{\footnotesize\ttfamily void CGraphe\+::\+GRASetnb\+Sommets (\begin{DoxyParamCaption}\item[{unsigned int}]{uinb\+Sommets }\end{DoxyParamCaption})}
+
+
+
+setter setter de l’attribut uinb\+Sommets 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & int uinb\+Sommets \+: nouveau nombre de sommets \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_graphe_a05afc75477653275b14e5594ba6e224e}\label{class_c_graphe_a05afc75477653275b14e5594ba6e224e}} 
+\index{CGraphe@{CGraphe}!GRASetTabSommets@{GRASetTabSommets}}
+\index{GRASetTabSommets@{GRASetTabSommets}!CGraphe@{CGraphe}}
+\doxysubsubsection{\texorpdfstring{GRASetTabSommets()}{GRASetTabSommets()}}
+{\footnotesize\ttfamily void CGraphe\+::\+GRASet\+Tab\+Sommets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_sommet}{CSommet}} $\ast$$\ast$}]{ptab\+Sommets }\end{DoxyParamCaption})}
+
+
+
+setter de l’attribut p\+SOMtab\+Sommets 
+
+
+\begin{DoxyParams}{Parameters}
+{\em CSommet$\ast$$\ast$} & ptab\+Sommets \+: nouveau tableau de sommets \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projet\+CPPGraphe/\mbox{\hyperlink{_c_graphe_8h}{CGraphe.\+h}}\item 
+Projet\+CPPGraphe/\mbox{\hyperlink{_c_graphe_8cpp}{CGraphe.\+cpp}}\end{DoxyCompactItemize}

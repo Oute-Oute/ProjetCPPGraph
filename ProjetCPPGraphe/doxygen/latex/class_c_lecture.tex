@@ -1,0 +1,320 @@
+\hypertarget{class_c_lecture}{}\doxysection{CLecture Class Reference}
+\label{class_c_lecture}\index{CLecture@{CLecture}}
+
+
+un objet \mbox{\hyperlink{class_c_lecture}{CLecture}} représente la lecture d\textquotesingle{}un fichier texte  
+
+
+
+
+{\ttfamily \#include $<$CLecture.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_lecture_ac650f708854b2a63a5f312c5dbdb0b71}{CLecture}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de \mbox{\hyperlink{class_c_lecture}{CLecture}} par defaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_lecture_a3e5bddd9287c89ae5c1daf85563afc79}{CLecture}} (char $\ast$cnF)
+\begin{DoxyCompactList}\small\item\em Constructeur de \mbox{\hyperlink{class_c_lecture}{CLecture}} en spécifiant un nom de fichier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_lecture_a24c95ffdb3eb8302c07b2464e06daad6}{CLecture}} (const \mbox{\hyperlink{class_c_lecture}{CLecture}} \&LECLecture)
+\begin{DoxyCompactList}\small\item\em Constructuer de \mbox{\hyperlink{class_c_lecture}{CLecture}} de recopie. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_lecture_ab865367da6b4db1eb7ea39690ec70b3d}{$\sim$\+CLecture}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \mbox{\hyperlink{class_c_lecture}{CLecture}}. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_c_lecture_ad7e0b73037e99a932acf58b423485b80}{LECGet\+Nb\+Sommets}} ()
+\begin{DoxyCompactList}\small\item\em Getter du nombre de sommets. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_c_lecture_a6b459c171005cbf9f00d8f00cf0e15dd}{LECGet\+Nb\+Arcs}} ()
+\begin{DoxyCompactList}\small\item\em Getter du nombre d\textquotesingle{}arcs. \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{class_c_lecture_a707a2e15070d76459475b43420134881}{LECGet\+Sommets}} ()
+\begin{DoxyCompactList}\small\item\em Getter du tableau de sommets. \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{class_c_lecture_a28db3302e5dc70490b93744d71fc2aba}{LECGet\+Arcs\+Depart}} ()
+\begin{DoxyCompactList}\small\item\em Getter du tableau des Arcs Partants. \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{class_c_lecture_a8840fce5f339b091f8601da8be3b9d3d}{LECGet\+Arcs\+Arrivee}} ()
+\begin{DoxyCompactList}\small\item\em Getter du tableau des Arcs d\textquotesingle{}Arrivée \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_lecture_aad9768591bb73bbbee6e00e27a4b2d60}{LECSet\+Nb\+Sommets}} ()
+\begin{DoxyCompactList}\small\item\em Setter du nombre de sommets depuis un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_lecture_ace93c6bae6839b78d24dbc9b0fc64942}{LECSet\+Nb\+Arcs}} ()
+\begin{DoxyCompactList}\small\item\em Setter du nombre d\textquotesingle{}arc depuis un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_lecture_ad390eefb41e318460bac3c51848ef82c}{LECSet\+Sommets}} ()
+\begin{DoxyCompactList}\small\item\em Setter du tableau de sommets depuis un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_lecture_a460ecda43e98faa82eb362c2de7c40f8}{LECSet\+Arcs}} ()
+\begin{DoxyCompactList}\small\item\em Setter des tableaux d\textquotesingle{}arcs arrivants et partants. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_lecture_a183c96c75299807860b23aa0f130903e}{LECLire\+Fichier}} ()
+\begin{DoxyCompactList}\small\item\em Fonction de lecture du fichier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+un objet \mbox{\hyperlink{class_c_lecture}{CLecture}} représente la lecture d\textquotesingle{}un fichier texte 
+
+un \mbox{\hyperlink{class_c_lecture}{CLecture}} contient l\textquotesingle{}attribut p\+LECnom\+Fichier, char$\ast$ du nom du fichier; fmy\+File, ifstream représentant le flux d\textquotesingle{}entrée du fichier; uinb\+Arcs unsigned int représentant le nombre d\textquotesingle{}arcs; uinb\+Sommets unsigned int représentant le nombre de sommets; $\ast$itab\+Sommets, tableau dynamique de int contenant les différents sommets; $\ast$itab\+Arcs\+Depart, tableau dynamique de int contenant les différents sommets de départ d\textquotesingle{}arcs; $\ast$itab\+Arcs\+Arrivee, tableau dynamique de int contenant les différents sommets d\textquotesingle{}arrivée d\textquotesingle{}arcs; 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_lecture_ac650f708854b2a63a5f312c5dbdb0b71}\label{class_c_lecture_ac650f708854b2a63a5f312c5dbdb0b71}} 
+\index{CLecture@{CLecture}!CLecture@{CLecture}}
+\index{CLecture@{CLecture}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{CLecture()}{CLecture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily CLecture\+::\+CLecture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur de \mbox{\hyperlink{class_c_lecture}{CLecture}} par defaut. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_a3e5bddd9287c89ae5c1daf85563afc79}\label{class_c_lecture_a3e5bddd9287c89ae5c1daf85563afc79}} 
+\index{CLecture@{CLecture}!CLecture@{CLecture}}
+\index{CLecture@{CLecture}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{CLecture()}{CLecture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily CLecture\+::\+CLecture (\begin{DoxyParamCaption}\item[{char $\ast$}]{cnF }\end{DoxyParamCaption})}
+
+
+
+Constructeur de \mbox{\hyperlink{class_c_lecture}{CLecture}} en spécifiant un nom de fichier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & cnF \+: char$\ast$ nom du fichier à lire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_a24c95ffdb3eb8302c07b2464e06daad6}\label{class_c_lecture_a24c95ffdb3eb8302c07b2464e06daad6}} 
+\index{CLecture@{CLecture}!CLecture@{CLecture}}
+\index{CLecture@{CLecture}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{CLecture()}{CLecture()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily CLecture\+::\+CLecture (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_lecture}{CLecture}} \&}]{LECLecture }\end{DoxyParamCaption})}
+
+
+
+Constructuer de \mbox{\hyperlink{class_c_lecture}{CLecture}} de recopie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em LECLecture} & \+: \mbox{\hyperlink{class_c_lecture}{CLecture}} a copier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_ab865367da6b4db1eb7ea39690ec70b3d}\label{class_c_lecture_ab865367da6b4db1eb7ea39690ec70b3d}} 
+\index{CLecture@{CLecture}!````~CLecture@{$\sim$CLecture}}
+\index{````~CLecture@{$\sim$CLecture}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{$\sim$CLecture()}{~CLecture()}}
+{\footnotesize\ttfamily CLecture\+::$\sim$\+CLecture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur de \mbox{\hyperlink{class_c_lecture}{CLecture}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_lecture_a8840fce5f339b091f8601da8be3b9d3d}\label{class_c_lecture_a8840fce5f339b091f8601da8be3b9d3d}} 
+\index{CLecture@{CLecture}!LECGetArcsArrivee@{LECGetArcsArrivee}}
+\index{LECGetArcsArrivee@{LECGetArcsArrivee}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECGetArcsArrivee()}{LECGetArcsArrivee()}}
+{\footnotesize\ttfamily int $\ast$ CLecture\+::\+LECGet\+Arcs\+Arrivee (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter du tableau des Arcs d\textquotesingle{}Arrivée 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Rien} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$itab\+Arcs\+Arrivee
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em Rien} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$itab\+Arcs\+Arrivee 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_a28db3302e5dc70490b93744d71fc2aba}\label{class_c_lecture_a28db3302e5dc70490b93744d71fc2aba}} 
+\index{CLecture@{CLecture}!LECGetArcsDepart@{LECGetArcsDepart}}
+\index{LECGetArcsDepart@{LECGetArcsDepart}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECGetArcsDepart()}{LECGetArcsDepart()}}
+{\footnotesize\ttfamily int $\ast$ CLecture\+::\+LECGet\+Arcs\+Depart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter du tableau des Arcs Partants. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Rien} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$itab\+Arcs\+Depart 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_a6b459c171005cbf9f00d8f00cf0e15dd}\label{class_c_lecture_a6b459c171005cbf9f00d8f00cf0e15dd}} 
+\index{CLecture@{CLecture}!LECGetNbArcs@{LECGetNbArcs}}
+\index{LECGetNbArcs@{LECGetNbArcs}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECGetNbArcs()}{LECGetNbArcs()}}
+{\footnotesize\ttfamily unsigned int CLecture\+::\+LECGet\+Nb\+Arcs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter du nombre d\textquotesingle{}arcs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Rien} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uinb\+Arcs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_ad7e0b73037e99a932acf58b423485b80}\label{class_c_lecture_ad7e0b73037e99a932acf58b423485b80}} 
+\index{CLecture@{CLecture}!LECGetNbSommets@{LECGetNbSommets}}
+\index{LECGetNbSommets@{LECGetNbSommets}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECGetNbSommets()}{LECGetNbSommets()}}
+{\footnotesize\ttfamily unsigned int CLecture\+::\+LECGet\+Nb\+Sommets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter du nombre de sommets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Rien} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uinb\+Sommets 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_a707a2e15070d76459475b43420134881}\label{class_c_lecture_a707a2e15070d76459475b43420134881}} 
+\index{CLecture@{CLecture}!LECGetSommets@{LECGetSommets}}
+\index{LECGetSommets@{LECGetSommets}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECGetSommets()}{LECGetSommets()}}
+{\footnotesize\ttfamily int $\ast$ CLecture\+::\+LECGet\+Sommets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter du tableau de sommets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Rien} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$itab\+Sommets 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_a183c96c75299807860b23aa0f130903e}\label{class_c_lecture_a183c96c75299807860b23aa0f130903e}} 
+\index{CLecture@{CLecture}!LECLireFichier@{LECLireFichier}}
+\index{LECLireFichier@{LECLireFichier}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECLireFichier()}{LECLireFichier()}}
+{\footnotesize\ttfamily void CLecture\+::\+LECLire\+Fichier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction de lecture du fichier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Rien} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rien 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_a460ecda43e98faa82eb362c2de7c40f8}\label{class_c_lecture_a460ecda43e98faa82eb362c2de7c40f8}} 
+\index{CLecture@{CLecture}!LECSetArcs@{LECSetArcs}}
+\index{LECSetArcs@{LECSetArcs}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECSetArcs()}{LECSetArcs()}}
+{\footnotesize\ttfamily void CLecture\+::\+LECSet\+Arcs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setter des tableaux d\textquotesingle{}arcs arrivants et partants. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Rien} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rien 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_ace93c6bae6839b78d24dbc9b0fc64942}\label{class_c_lecture_ace93c6bae6839b78d24dbc9b0fc64942}} 
+\index{CLecture@{CLecture}!LECSetNbArcs@{LECSetNbArcs}}
+\index{LECSetNbArcs@{LECSetNbArcs}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECSetNbArcs()}{LECSetNbArcs()}}
+{\footnotesize\ttfamily void CLecture\+::\+LECSet\+Nb\+Arcs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setter du nombre d\textquotesingle{}arc depuis un fichier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Rien} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rien 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_aad9768591bb73bbbee6e00e27a4b2d60}\label{class_c_lecture_aad9768591bb73bbbee6e00e27a4b2d60}} 
+\index{CLecture@{CLecture}!LECSetNbSommets@{LECSetNbSommets}}
+\index{LECSetNbSommets@{LECSetNbSommets}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECSetNbSommets()}{LECSetNbSommets()}}
+{\footnotesize\ttfamily void CLecture\+::\+LECSet\+Nb\+Sommets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setter du nombre de sommets depuis un fichier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Rien} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rien ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_lecture_ad390eefb41e318460bac3c51848ef82c}\label{class_c_lecture_ad390eefb41e318460bac3c51848ef82c}} 
+\index{CLecture@{CLecture}!LECSetSommets@{LECSetSommets}}
+\index{LECSetSommets@{LECSetSommets}!CLecture@{CLecture}}
+\doxysubsubsection{\texorpdfstring{LECSetSommets()}{LECSetSommets()}}
+{\footnotesize\ttfamily void CLecture\+::\+LECSet\+Sommets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setter du tableau de sommets depuis un fichier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Rien} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Rien 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projet\+CPPGraphe/\mbox{\hyperlink{_c_lecture_8h}{CLecture.\+h}}\item 
+Projet\+CPPGraphe/CLecture.\+cpp\end{DoxyCompactItemize}

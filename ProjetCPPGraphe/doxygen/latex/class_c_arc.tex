@@ -1,0 +1,157 @@
+\hypertarget{class_c_arc}{}\doxysection{CArc Class Reference}
+\label{class_c_arc}\index{CArc@{CArc}}
+
+
+un objet \mbox{\hyperlink{class_c_arc}{CArc}} represente une arrete orientee sur le graph  
+
+
+
+
+{\ttfamily \#include $<$CArc.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_arc_a9d49938cd3d957601feab2bee5995980}{CArc}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de Carc par defaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_arc_a424144e68aed5661339c833a4fb02e17}{CArc}} (unsigned int ui\+ARCdest)
+\begin{DoxyCompactList}\small\item\em Constructeur de \mbox{\hyperlink{class_c_arc}{CArc}} avec renseignement de destination. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_arc_a4104f8ae26e96f791845fc981c10f4d7}{CArc}} (const \mbox{\hyperlink{class_c_arc}{CArc}} \&ARCarc)
+\begin{DoxyCompactList}\small\item\em Constructuer de \mbox{\hyperlink{class_c_arc}{CArc}} de recopie. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_arc_a081af0a5a59e5cb576099d339a24cc97}{$\sim$\+CArc}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \mbox{\hyperlink{class_c_arc}{CArc}}. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_c_arc_af60167dbbfcd04767f9aa8c5a31b293e}{ARCGet\+Destination}} ()
+\begin{DoxyCompactList}\small\item\em Getter de l\textquotesingle{}attribut ui\+ARCdestination. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_arc_a81643312dbaedfe22ca3e0fa0dad69b1}{ARCSet\+Destination}} (unsigned int ui\+Destination)
+\begin{DoxyCompactList}\small\item\em setter de l\textquotesingle{}attribut ui\+ARCdestination \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+un objet \mbox{\hyperlink{class_c_arc}{CArc}} represente une arrete orientee sur le graph 
+
+un \mbox{\hyperlink{class_c_arc}{CArc}} contient l\textquotesingle{}attribut ui\+ARCdestination, int representant l\textquotesingle{}indice du noeud de destination 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_arc_a9d49938cd3d957601feab2bee5995980}\label{class_c_arc_a9d49938cd3d957601feab2bee5995980}} 
+\index{CArc@{CArc}!CArc@{CArc}}
+\index{CArc@{CArc}!CArc@{CArc}}
+\doxysubsubsection{\texorpdfstring{CArc()}{CArc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily CArc\+::\+CArc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur de Carc par defaut. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_arc_a424144e68aed5661339c833a4fb02e17}\label{class_c_arc_a424144e68aed5661339c833a4fb02e17}} 
+\index{CArc@{CArc}!CArc@{CArc}}
+\index{CArc@{CArc}!CArc@{CArc}}
+\doxysubsubsection{\texorpdfstring{CArc()}{CArc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily CArc\+::\+CArc (\begin{DoxyParamCaption}\item[{unsigned int}]{ui\+ARCdest }\end{DoxyParamCaption})}
+
+
+
+Constructeur de \mbox{\hyperlink{class_c_arc}{CArc}} avec renseignement de destination. 
+
+Constructeur de \mbox{\hyperlink{class_c_arc}{CArc}} avec renseigneent de destination.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui\+ARCdest} & \+: unsigned int indice du sommet de destination \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_arc_a4104f8ae26e96f791845fc981c10f4d7}\label{class_c_arc_a4104f8ae26e96f791845fc981c10f4d7}} 
+\index{CArc@{CArc}!CArc@{CArc}}
+\index{CArc@{CArc}!CArc@{CArc}}
+\doxysubsubsection{\texorpdfstring{CArc()}{CArc()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily CArc\+::\+CArc (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_arc}{CArc}} \&}]{ARCarc }\end{DoxyParamCaption})}
+
+
+
+Constructuer de \mbox{\hyperlink{class_c_arc}{CArc}} de recopie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ARCarc} & \+: \mbox{\hyperlink{class_c_arc}{CArc}} a copier \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_arc_a081af0a5a59e5cb576099d339a24cc97}\label{class_c_arc_a081af0a5a59e5cb576099d339a24cc97}} 
+\index{CArc@{CArc}!````~CArc@{$\sim$CArc}}
+\index{````~CArc@{$\sim$CArc}!CArc@{CArc}}
+\doxysubsubsection{\texorpdfstring{$\sim$CArc()}{~CArc()}}
+{\footnotesize\ttfamily CArc\+::$\sim$\+CArc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur de \mbox{\hyperlink{class_c_arc}{CArc}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_arc_af60167dbbfcd04767f9aa8c5a31b293e}\label{class_c_arc_af60167dbbfcd04767f9aa8c5a31b293e}} 
+\index{CArc@{CArc}!ARCGetDestination@{ARCGetDestination}}
+\index{ARCGetDestination@{ARCGetDestination}!CArc@{CArc}}
+\doxysubsubsection{\texorpdfstring{ARCGetDestination()}{ARCGetDestination()}}
+{\footnotesize\ttfamily unsigned int CArc\+::\+ARCGet\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de l\textquotesingle{}attribut ui\+ARCdestination. 
+
+Getter de destination d\textquotesingle{}un \mbox{\hyperlink{class_c_arc}{CArc}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ui\+ARCdestination \+: unsigned int indice du sommet de destination actuel de du \mbox{\hyperlink{class_c_arc}{CArc}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_arc_a81643312dbaedfe22ca3e0fa0dad69b1}\label{class_c_arc_a81643312dbaedfe22ca3e0fa0dad69b1}} 
+\index{CArc@{CArc}!ARCSetDestination@{ARCSetDestination}}
+\index{ARCSetDestination@{ARCSetDestination}!CArc@{CArc}}
+\doxysubsubsection{\texorpdfstring{ARCSetDestination()}{ARCSetDestination()}}
+{\footnotesize\ttfamily void CArc\+::\+ARCSet\+Destination (\begin{DoxyParamCaption}\item[{unsigned int}]{ui\+Destination }\end{DoxyParamCaption})}
+
+
+
+setter de l\textquotesingle{}attribut ui\+ARCdestination 
+
+Setter de destination d\textquotesingle{}un \mbox{\hyperlink{class_c_arc}{CArc}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui\+Destination} & \+: unsigned int Destionation souhaitee \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projet\+CPPGraphe/\mbox{\hyperlink{_c_arc_8h}{CArc.\+h}}\item 
+Projet\+CPPGraphe/\mbox{\hyperlink{_c_arc_8cpp}{CArc.\+cpp}}\end{DoxyCompactItemize}

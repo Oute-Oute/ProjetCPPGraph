@@ -1,0 +1,237 @@
+\hypertarget{class_c_exception}{}\doxysection{CException Class Reference}
+\label{class_c_exception}\index{CException@{CException}}
+
+
+On throw des objets de type \mbox{\hyperlink{class_c_exception}{CException}} pour gerer les exceptions pendant l\textquotesingle{}execution du code.  
+
+
+
+
+{\ttfamily \#include $<$CException.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_exception_a193ebfae477160a82d6e44299af4ed10}{CException}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de \mbox{\hyperlink{class_c_exception}{CException}} par defaut. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_exception_a7919484e95bec79108f477bf9cebd7f9}{CException}} (char $\ast$p\+EXCope, char $\ast$p\+EXCmess)
+\begin{DoxyCompactList}\small\item\em Constructeur de \mbox{\hyperlink{class_c_exception}{CException}} de confort avec indication de l\textquotesingle{}operation et du message. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_exception_a8d52405a9573fceaabfe251d88d92536}{$\sim$\+CException}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de \mbox{\hyperlink{class_c_exception}{CException}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_exception_a148ad6dcfafea9daa2a96cbb48af8272}{EXCGet\+Message}} (char $\ast$p\+EXCmess)
+\begin{DoxyCompactList}\small\item\em retourne le message d exception de la \mbox{\hyperlink{class_c_exception}{CException}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_exception_a9123d9cff750453cbbe63a570cd51585}{EXCSet\+Message}} (char $\ast$p\+EXCmess)
+\begin{DoxyCompactList}\small\item\em definit le message d exception dans la \mbox{\hyperlink{class_c_exception}{CException}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_exception_ac639f59fa431953f06edfc79a5449d55}{EXCGet\+Operation}} (char $\ast$p\+EXCope)
+\begin{DoxyCompactList}\small\item\em retourne l operation concernee par la \mbox{\hyperlink{class_c_exception}{CException}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_exception_a1f31d67dc5a7406bf094097a3331a8af}{EXCSet\+Operation}} (char $\ast$c\+EXCope)
+\begin{DoxyCompactList}\small\item\em definit l operation concernee par la \mbox{\hyperlink{class_c_exception}{CException}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_exception_aa2c6923fc20aa59600c7a6bea03e10fa}{EXCAfficher\+Exception}} ()
+\begin{DoxyCompactList}\small\item\em affiche le message d\textquotesingle{}exception de la \mbox{\hyperlink{class_c_exception}{CException}} courante \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+On throw des objets de type \mbox{\hyperlink{class_c_exception}{CException}} pour gerer les exceptions pendant l\textquotesingle{}execution du code. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_exception_a193ebfae477160a82d6e44299af4ed10}\label{class_c_exception_a193ebfae477160a82d6e44299af4ed10}} 
+\index{CException@{CException}!CException@{CException}}
+\index{CException@{CException}!CException@{CException}}
+\doxysubsubsection{\texorpdfstring{CException()}{CException()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily CException\+::\+CException (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructeur de \mbox{\hyperlink{class_c_exception}{CException}} par defaut. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_exception_a7919484e95bec79108f477bf9cebd7f9}\label{class_c_exception_a7919484e95bec79108f477bf9cebd7f9}} 
+\index{CException@{CException}!CException@{CException}}
+\index{CException@{CException}!CException@{CException}}
+\doxysubsubsection{\texorpdfstring{CException()}{CException()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily CException\+::\+CException (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+EXCope,  }\item[{char $\ast$}]{p\+EXCmess }\end{DoxyParamCaption})}
+
+
+
+Constructeur de \mbox{\hyperlink{class_c_exception}{CException}} de confort avec indication de l\textquotesingle{}operation et du message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\+EXCope} & \+: char Operateur \\
+\hline
+{\em p\+EXCmess} & \+: char$\ast$ Message d\textquotesingle{}exception \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em c\+EXCope} & \+: char$\ast$ Operation \\
+\hline
+{\em p\+EXCmess} & \+: char$\ast$ Message d\textquotesingle{}exception \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_exception_a8d52405a9573fceaabfe251d88d92536}\label{class_c_exception_a8d52405a9573fceaabfe251d88d92536}} 
+\index{CException@{CException}!````~CException@{$\sim$CException}}
+\index{````~CException@{$\sim$CException}!CException@{CException}}
+\doxysubsubsection{\texorpdfstring{$\sim$CException()}{~CException()}}
+{\footnotesize\ttfamily CException\+::$\sim$\+CException (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructeur de \mbox{\hyperlink{class_c_exception}{CException}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_exception_aa2c6923fc20aa59600c7a6bea03e10fa}\label{class_c_exception_aa2c6923fc20aa59600c7a6bea03e10fa}} 
+\index{CException@{CException}!EXCAfficherException@{EXCAfficherException}}
+\index{EXCAfficherException@{EXCAfficherException}!CException@{CException}}
+\doxysubsubsection{\texorpdfstring{EXCAfficherException()}{EXCAfficherException()}}
+{\footnotesize\ttfamily void CException\+::\+EXCAfficher\+Exception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+affiche le message d\textquotesingle{}exception de la \mbox{\hyperlink{class_c_exception}{CException}} courante 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_exception_a148ad6dcfafea9daa2a96cbb48af8272}\label{class_c_exception_a148ad6dcfafea9daa2a96cbb48af8272}} 
+\index{CException@{CException}!EXCGetMessage@{EXCGetMessage}}
+\index{EXCGetMessage@{EXCGetMessage}!CException@{CException}}
+\doxysubsubsection{\texorpdfstring{EXCGetMessage()}{EXCGetMessage()}}
+{\footnotesize\ttfamily void CException\+::\+EXCGet\+Message (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+EXCmess }\end{DoxyParamCaption})}
+
+
+
+retourne le message d exception de la \mbox{\hyperlink{class_c_exception}{CException}} 
+
+copie le message d\textquotesingle{}exception dans le char$\ast$ en parametre
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+s\+EXCMessage le message d exception
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & p\+EXCmess \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_exception_ac639f59fa431953f06edfc79a5449d55}\label{class_c_exception_ac639f59fa431953f06edfc79a5449d55}} 
+\index{CException@{CException}!EXCGetOperation@{EXCGetOperation}}
+\index{EXCGetOperation@{EXCGetOperation}!CException@{CException}}
+\doxysubsubsection{\texorpdfstring{EXCGetOperation()}{EXCGetOperation()}}
+{\footnotesize\ttfamily void CException\+::\+EXCGet\+Operation (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+EXCope }\end{DoxyParamCaption})}
+
+
+
+retourne l operation concernee par la \mbox{\hyperlink{class_c_exception}{CException}} 
+
+copie l\textquotesingle{}operation d\textquotesingle{}exception dans le char$\ast$ en parametre
+
+
+\begin{DoxyParams}{Parameters}
+{\em RIEN} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+c\+EXCOperation l operateur sous forme de char
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & p\+EXCope \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_exception_a9123d9cff750453cbbe63a570cd51585}\label{class_c_exception_a9123d9cff750453cbbe63a570cd51585}} 
+\index{CException@{CException}!EXCSetMessage@{EXCSetMessage}}
+\index{EXCSetMessage@{EXCSetMessage}!CException@{CException}}
+\doxysubsubsection{\texorpdfstring{EXCSetMessage()}{EXCSetMessage()}}
+{\footnotesize\ttfamily void CException\+::\+EXCSet\+Message (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+EXCmess }\end{DoxyParamCaption})}
+
+
+
+definit le message d exception dans la \mbox{\hyperlink{class_c_exception}{CException}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em smessage} & le nouveau message d exception \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & p\+EXCmess le nouveau message d exception \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_exception_a1f31d67dc5a7406bf094097a3331a8af}\label{class_c_exception_a1f31d67dc5a7406bf094097a3331a8af}} 
+\index{CException@{CException}!EXCSetOperation@{EXCSetOperation}}
+\index{EXCSetOperation@{EXCSetOperation}!CException@{CException}}
+\doxysubsubsection{\texorpdfstring{EXCSetOperation()}{EXCSetOperation()}}
+{\footnotesize\ttfamily void CException\+::\+EXCSet\+Operation (\begin{DoxyParamCaption}\item[{char $\ast$}]{p\+EXCope }\end{DoxyParamCaption})}
+
+
+
+definit l operation concernee par la \mbox{\hyperlink{class_c_exception}{CException}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c\+Operation} & l operateur sous forme de char \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em char$\ast$} & p\+EXCope \+: la nouvelle operation du \mbox{\hyperlink{class_c_exception}{CException}} actuel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+RIEN 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Projet\+CPPGraphe/CException.\+h\item 
+Projet\+CPPGraphe/CException.\+cpp\end{DoxyCompactItemize}
