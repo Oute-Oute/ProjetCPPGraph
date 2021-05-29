@@ -15,19 +15,19 @@ int main(int argc, char *argv[])
 
 		unsigned int uiboucleSommets;
 		unsigned int uiboucleArcs;
-
+		unsigned int uiboucleArcs2;
 		CSommet** sommets = new CSommet*[Test.LECGetNbSommets()];
 		for (uiboucleSommets = 0; uiboucleSommets < Test.LECGetNbSommets(); uiboucleSommets++) {
 			sommets[uiboucleSommets] = new CSommet(Test.LECGetSommets()[uiboucleSommets]);
 		}
 
 		for (uiboucleArcs = 0; uiboucleArcs < Test.LECGetNbArcs(); uiboucleArcs++) {
-			for (int i = 0; i < Test.LECGetNbSommets(); i++) {
-				if (sommets[i]->SOMGetIndice() == Test.LECGetArcsDepart()[uiboucleArcs]) {
-					sommets[i]->SOMAddArcPartant(Test.LECGetArcsArrivee()[uiboucleArcs]);
+			for (uiboucleArcs2 = 0; uiboucleArcs2 < Test.LECGetNbSommets(); uiboucleArcs2++) {
+				if (sommets[uiboucleArcs2]->SOMGetIndice() == Test.LECGetArcsDepart()[uiboucleArcs]) {
+					sommets[uiboucleArcs2]->SOMAddArcPartant(Test.LECGetArcsArrivee()[uiboucleArcs]);
 				}
-				if (sommets[i]->SOMGetIndice() == Test.LECGetArcsArrivee()[uiboucleArcs]) {
-					sommets[i]->SOMAddArcArrivant(Test.LECGetArcsDepart()[uiboucleArcs]);
+				if (sommets[uiboucleArcs2]->SOMGetIndice() == Test.LECGetArcsArrivee()[uiboucleArcs]) {
+					sommets[uiboucleArcs2]->SOMAddArcArrivant(Test.LECGetArcsDepart()[uiboucleArcs]);
 				}
 			}
 			//sommets[Test.LECGetArcsDepart()[uiboucleArcs] - 1]->SOMAddArcPartant(Test.LECGetArcsArrivee()[uiboucleArcs]);
@@ -36,8 +36,6 @@ int main(int argc, char *argv[])
 
 
 		CGraphe graphe(sommets, Test.LECGetNbSommets());
-
-		graphe.GRAModSommet(1,29);
 
 		graphe.GRAAfficherGraphe();
 
