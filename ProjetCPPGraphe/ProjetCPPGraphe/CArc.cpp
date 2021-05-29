@@ -3,7 +3,7 @@
 /// @file CArc.cpp
 /// @author NASSIRI Adam
 /// @coauthor BLUMSTEIN Thomas
-/// @date 2021-04/21
+/// @date 2021-05/28
 ///
 
 #include "CArc.h"

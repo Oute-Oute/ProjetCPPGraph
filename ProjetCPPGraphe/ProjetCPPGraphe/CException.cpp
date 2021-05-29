@@ -3,7 +3,7 @@
 /// @file CEsxeption.cpp
 /// @author NASSIRI Adam
 /// @coauthor BLUMSTEIN Thomas
-/// @date 2021-04/21
+/// @date 2021-05/09
 ///
 
 #include "CException.h"
@@ -18,7 +18,7 @@ CException::CException() {
 }
 
 ///@brief Constructeur de CException de confort avec indication de l'operation et du message
-///@param cEXCope : char Operateur 
+///@param cEXCope : char* Operation 
 ///@param pEXCmess : char* Message d'exception
 ///@return RIEN
 CException::CException(char* pEXCope, char * pEXCmess)
@@ -34,29 +34,29 @@ CException::~CException() {
 
 }
 
-/// @brief retourne le message d exception de la CException
-/// @param RIEN
-/// @return sEXCMessage le message d exception
+/// @brief copie le message d'exception dans le char* en parametre
+/// @param char* pEXCmess
+/// @return RIEN
 void CException::EXCGetMessage(char* pEXCmess) {
 	strcpy_s(pEXCmess, sizeof pEXCmess, pEXCmessage);
 }
 
 /// @brief definit le message d exception dans la CException
-/// @param smessage le nouveau message d exception
+/// @param char* pEXCmess le nouveau message d exception
 /// @return RIEN
 void CException::EXCSetMessage(char* pEXCmess) {
 	pEXCmessage = pEXCmess;
 }
 
-/// @brief retourne l operation concernee par la CException
-/// @param RIEN
-/// @return cEXCOperation l operateur sous forme de char
+/// @brief copie l'operation d'exception dans le char* en parametre
+/// @param char* pEXCope
+/// @return RIEN
 void CException::EXCGetOperation(char* pEXCope) {
 	strcpy_s(pEXCope, sizeof pEXCope, pEXCoperation);
 }
 
 /// @brief definit l operation concernee par la CException
-/// @param cOperation l operateur sous forme de char
+/// @param char* pEXCope : la nouvelle operation du CException actuel
 /// @return RIEN
 void CException::EXCSetOperation(char* pEXCope) {
 	pEXCoperation = pEXCope;

@@ -1,11 +1,27 @@
+
+///
+/// @brief source de la classe CGraphe
+/// @file CGraphe.cpp
+/// @author NASSIRI Adam
+/// @coauthor BLUMSTEIN Thomas
+/// @date 2021-05/28
+///
+
 #include "CGraphe.h"
 
+///@brief Constructeur de CGraph par defaut
+///@param RIEN
+///@return RIEN
 CGraphe::CGraphe()
 {
 	pSOMtabSommets = nullptr;
 	uinbSommets = 0;
 }
 
+///@brief  constructeur de CGraphe confort 
+///@param pSOMsommets : CSommet** tableau de pointeurs vers les sommets du CGraph
+///@param uinbSommets : unsigned int correspondant au nombre de sommets du CGraph
+///@return RIEN
 CGraphe::CGraphe(CSommet** pSOMsommets, unsigned int uinbSommets)
 {
 	CException *EXCException = new CException();
@@ -26,36 +42,59 @@ CGraphe::CGraphe(CSommet** pSOMsommets, unsigned int uinbSommets)
 	this->uinbSommets = uinbSommets;
 }
 
+///@brief constructeur de CGraphe de recopie
+///@param  CGraphe &GRAgraphe : CGraphe a recopier
+///@return RIEN
 CGraphe::CGraphe(const CGraphe &GRAgraphe)
 {
 	pSOMtabSommets = GRAgraphe.pSOMtabSommets;
 	uinbSommets = GRAgraphe.uinbSommets;
 }
 
+///@brief destructeur de CGraphe
+///@param RIEN
+///@return RIEN
 CGraphe::~CGraphe()
 {
 }
 
+///@brief  getter de l’attribut pSOMtabSommets
+///@param RIEN
+///@return CSommet** pSOMtabSommets : tableau des sommets du CGraphe
 CSommet** CGraphe::GRAGetTabSommets()
 {
 	return pSOMtabSommets;
 }
 
+///@brief getter de l’attribut uinbSommets
+///@param RIEN
+///@return unsigned int uinbSommets : nombre de sommets du CGraphe
 unsigned int CGraphe::GRAGetnbSommets()
 {
 	return uinbSommets;
 }
 
+///@brief setter de l’attribut pSOMtabSommets
+///@param CSommet** ptabSommets : nouveau tableau de sommets 
+///@return RIEN
 void CGraphe::GRASetTabSommets(CSommet** ptabSommets)
 {
 	pSOMtabSommets = ptabSommets;
 }
 
+///@brief setter setter de l’attribut uinbSommets
+///@param unsigned int uinbSommets : nouveau nombre de sommets
+///@return RIEN
 void CGraphe::GRASetnbSommets(unsigned int uinbSommets)
 {
 	this->uinbSommets = uinbSommets;
 }
 
+///@brief modifie le sommet d’indice uiindice du graphe actuel, on lui donne l’indice uinewIndice
+///@detail ATTENTION : cette méthode ne modifie pas les tableaux d’arcs partants et arrivants des autres sommets, nous considérons que la modification de ceux-ci dépend de l’utilisation souhaitée
+///@param unsigned int uindice : indice du CSommet a modifier
+///@param unsigned int uinewIndice : nouvel indice assigne au CSommet
+///@return RIEN
 void CGraphe::GRAModSommet(unsigned int uiindice, unsigned int uinewIndice)
 {
 	if (uiindice != uinewIndice) {
@@ -81,6 +120,9 @@ void CGraphe::GRAModSommet(unsigned int uiindice, unsigned int uinewIndice)
 
 }
 
+///@brief ajoute le sommet au graphe
+///@param CSommet* pSOMsommet : pointeur vers le CSommet a ajouter
+///@return RIEN
 void CGraphe::GRAAddSommet(CSommet* pSOMsommet)
 {
 	CException *EXCException = new CException();
@@ -100,6 +142,9 @@ void CGraphe::GRAAddSommet(CSommet* pSOMsommet)
 	pSOMtabSommets[uinbSommets] = pSOMsommet;
 }
 
+///@brief retire le CSommet d’indice uisomm du CGraphe actuel
+///@param unsigned int uisomm : indice du CSommet a retirer
+///@return RIEN
 void CGraphe::GRADelSommet(unsigned int uisomm)
 {
 	for (unsigned int uicompteSommets = 0 ; uicompteSommets < uinbSommets ; uicompteSommets++) {
@@ -120,6 +165,10 @@ void CGraphe::GRADelSommet(unsigned int uisomm)
 
 }
 
+///@brief affiche le graphique dans la sortie par défaut 
+///@detail affichage du nombre de sommets, leurs indices et les arcs sortants de chaque sommets
+///@param RIEN
+///@return RIEN
 void CGraphe::GRAAfficherGraphe()
 {
 	
@@ -153,6 +202,9 @@ void CGraphe::GRAAfficherGraphe()
 	std::cout << std::endl;
 }
 
+///@brief inverse tous les arcs du graphe actuel
+///@param RIEN
+///@return RIEN
 void CGraphe::GRAInverserGraphe() {
 	for (unsigned int uiCompteSommets = 0 ; uiCompteSommets < GRAGetnbSommets() ; uiCompteSommets++) {
 		pSOMtabSommets[uiCompteSommets]->SOMInverseTableaux();

@@ -73,7 +73,7 @@ public:
 	
 	///@brief Getter du tableau des Arcs d'Arrivée
 	///@param Rien
-	///@return*itabArcsArrivee
+	///@return *itabArcsArrivee
 	int *LECGetArcsArrivee();
 
 	///@brief Setter du nombre de sommets depuis un fichier

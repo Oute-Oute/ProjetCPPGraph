@@ -14,6 +14,7 @@
 class CArc
 {
 private:
+	///destination du CArc actuel
 	unsigned int uiARCdestination;
 
 public:
