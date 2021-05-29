@@ -23,7 +23,7 @@ public:
 	///@return RIEN
 	CArc();
 
-	///@brief Constructeur de CArc avec renseigneent de destination
+	///@brief Constructeur de CArc avec renseignement de destination
 	///@param uiARCdest : unsigned int indice du sommet de destination
 	///@return RIEN
 	CArc(unsigned int uiARCdest);
@@ -38,12 +38,12 @@ public:
 	///@return RIEN
 	~CArc();
 
-	///@brief Getter de destination d'un CArc
+	///@brief Getter de l'attribut uiARCdestination
 	///@param RIEN
 	///@return uiARCdestination : unsigned int indice du sommet de destination actuel de du CArc
 	unsigned int ARCGetDestination();
 
-	///@brief Setter de destination d'un CArc
+	///@brief setter de l'attribut uiARCdestination
 	///@param uiDestination : unsigned int Destionation souhaitee
 	///@return RIEN
 	void ARCSetDestination(unsigned int uiDestination);
