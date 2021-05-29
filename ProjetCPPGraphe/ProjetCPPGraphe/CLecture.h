@@ -11,23 +11,28 @@ using namespace std;
 
 ///@brief un objet CLecture représente la lecture d'un fichier texte
 ///@details un CLecture contient l'attribut pLECnomFichier, char* du nom du fichier; 
-///fmyFile, ifstream représentant le flux d'entrée du fichier
+///fmyFile, ifstream représentant le flux d'entrée du fichier;
+/// uinbArcs unsigned int représentant le nombre d'arcs;
+/// uinbSommets unsigned int représentant le nombre de sommets;
+/// *itabSommets, tableau dynamique de int contenant les différents sommets;
+/// *itabArcsDepart, tableau dynamique de int contenant les différents sommets de départ d'arcs;
+/// *itabArcsArrivee, tableau dynamique de int contenant les différents sommets d'arrivée d'arcs;
 class CLecture
 {
 private:
 	char* pLECnomFichier;
 
-	ifstream fmyFile;
+	ifstream fLECmyFile;
 
-	unsigned int uinbArcs;
+	unsigned int uiLECnbArcs;
 	
-	unsigned int uinbSommets;
+	unsigned int uiLECnbSommets;
 
-	int *itabSommets;
+	int *iLECtabSommets;
 
-	int *itabArcsDepart;
+	int *iLECtabArcsDepart;
 
-	int *itabArcsArrivee;
+	int *iLECtabArcsArrivee;
 
 
 public:
